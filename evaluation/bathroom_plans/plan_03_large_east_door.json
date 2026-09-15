@@ -1,0 +1,65 @@
+{
+  "id": "plan_03_large_east_door",
+  "description": "Large bathroom with east entry, multiple windows and flexible proposed infrastructure.",
+  "room": {
+    "width": 3600,
+    "depth": 3000,
+    "unit": "mm"
+  },
+  "door": {
+    "wall": "east",
+    "offset": 1000,
+    "width": 900,
+    "hinge_position": "top",
+    "opening_direction": "outward",
+    "swing_angle": 90,
+    "swing_radius": 900
+  },
+  "windows": [
+    {
+      "wall": "north",
+      "offset": 500,
+      "width": 1200
+    },
+    {
+      "wall": "west",
+      "offset": 700,
+      "width": 800
+    }
+  ],
+  "ventilation": [
+    {
+      "wall": "south",
+      "type": "exhaust_fan"
+    }
+  ],
+  "fixed_obstacles": [
+    {
+      "type": "service_chase",
+      "x": 100,
+      "y": 100,
+      "width": 300,
+      "depth": 900
+    }
+  ],
+  "existing_plumbing": [],
+  "existing_electrical": [
+    {
+      "wall": "south",
+      "offset": 1000
+    }
+  ],
+  "proposed_plumbing": [
+    {
+      "zone": "east_wall"
+    },
+    {
+      "zone": "south_wall"
+    }
+  ],
+  "proposed_electrical": [
+    {
+      "zone": "south_wall"
+    }
+  ]
+}

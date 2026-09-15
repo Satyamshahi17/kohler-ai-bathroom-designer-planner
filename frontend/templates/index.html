@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kohler AI Bathroom Designer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Kohler AI Research POC</p>
+        <h1>AI Bathroom Designer</h1>
+        <p>From bathroom plan + requirements to compatible products, optimized bundles and a validated 2D design.</p>
+      </div>
+      <div class="status-pill" id="status-pill">Ready</div>
+    </header>
+
+    <section class="grid input-grid">
+      <form id="design-form" class="panel input-panel">
+        <h2>Design input</h2>
+        <label>Bathroom plan / image <input id="image" type="file" accept="image/*"></label>
+        <label>Requirements <textarea id="requirements" rows="5">I want a warm Japanese Zen bathroom under $5000 with vanity, faucet, toilet and shower.</textarea></label>
+        <details>
+          <summary>Structured spatial plan (optional)</summary>
+          <p class="muted">Useful for offline demo/testing when no multimodal API key is configured.</p>
+          <textarea id="spatial-plan" rows="10" placeholder='Paste SpatialPlan JSON here'></textarea>
+        </details>
+        <button type="submit" id="generate-btn">Generate Design</button>
+        <p id="error" class="error"></p>
+      </form>
+
+      <section class="panel pipeline-panel">
+        <h2>Pipeline</h2>
+        <ol class="pipeline-list" id="pipeline-list">
+          <li>Requirements</li><li>Spatial extraction</li><li>Hybrid recommendation</li><li>PuLP optimization</li><li>Layout validation</li><li>Deterministic SVG</li>
+        </ol>
+        <div id="spatial-summary" class="summary"></div>
+      </section>
+    </section>
+
+    <section class="grid result-grid">
+      <section class="panel">
+        <div class="section-head"><h2>Recommended bundle</h2><span id="bundle-cost"></span></div>
+        <div id="products" class="product-list"><p class="muted">Generate a design to see products.</p></div>
+        <h3>Top 3 bundles</h3>
+        <div id="bundles" class="bundle-list"></div>
+      </section>
+
+      <section class="panel canvas-panel">
+        <div class="section-head"><h2>2D bathroom plan</h2><span id="layout-score"></span></div>
+        <div id="canvas" class="canvas"></div>
+        <div id="validation" class="validation"></div>
+      </section>
+    </section>
+
+    <section class="grid bottom-grid">
+      <section class="panel">
+        <h2>Why this design?</h2>
+        <div id="explanation"><p class="muted">The reasoning trace will appear here.</p></div>
+      </section>
+      <section class="panel">
+        <h2>Replace a product</h2>
+        <div class="replace-row">
+          <select id="replace-category"><option value="vanity">Vanity</option><option value="faucet">Faucet</option><option value="toilet">Toilet</option><option value="shower">Shower</option></select>
+          <button id="replace-btn" type="button">Replace</button>
+        </div>
+        <p class="muted">The system rechecks compatibility, accessories, budget, infrastructure and layout.</p>
+      </section>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

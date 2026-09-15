@@ -1,0 +1,3551 @@
+[
+  {
+    "id": "SYN-VAN-001",
+    "model_number": "SYN-VAN-001",
+    "name": "Japanese Zen Vanity 01",
+    "category": "vanity",
+    "price": 705,
+    "width": 700,
+    "depth": 490,
+    "height": 580,
+    "description": "Synthetic japanese zen vanity for research evaluation.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-002"
+    ],
+    "compatibility": [
+      "SYN-FAU-001"
+    ]
+  },
+  {
+    "id": "SYN-VAN-002",
+    "model_number": "SYN-VAN-002",
+    "name": "Modern Vanity 02",
+    "category": "vanity",
+    "price": 760,
+    "width": 2200,
+    "depth": 530,
+    "height": 610,
+    "description": "Synthetic modern vanity for research evaluation.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Matte White",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-002"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-003",
+    "model_number": "SYN-VAN-003",
+    "name": "Organic Spa Vanity 03",
+    "category": "vanity",
+    "price": 815,
+    "width": 900,
+    "depth": 570,
+    "height": 550,
+    "description": "Synthetic organic spa vanity for research evaluation.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-001"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-004",
+    "model_number": "SYN-VAN-004",
+    "name": "Contemporary Vanity 04",
+    "category": "vanity",
+    "price": 870,
+    "width": 1000,
+    "depth": 450,
+    "height": 580,
+    "description": "Synthetic contemporary vanity for research evaluation.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-002"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-005",
+    "model_number": "SYN-VAN-005",
+    "name": "Classic Vanity 05",
+    "category": "vanity",
+    "price": 925,
+    "width": 1100,
+    "depth": 490,
+    "height": 610,
+    "description": "Synthetic classic vanity for research evaluation.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-002"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-006",
+    "model_number": "SYN-VAN-006",
+    "name": "Japanese Zen Vanity 06",
+    "category": "vanity",
+    "price": 980,
+    "width": 600,
+    "depth": 530,
+    "height": 550,
+    "description": "Synthetic japanese zen vanity for research evaluation.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-001"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-007",
+    "model_number": "SYN-VAN-007",
+    "name": "Modern Vanity 07",
+    "category": "vanity",
+    "price": 1035,
+    "width": 700,
+    "depth": 570,
+    "height": 580,
+    "description": "Synthetic modern vanity for research evaluation.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Matte White",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-002"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-008",
+    "model_number": "SYN-VAN-008",
+    "name": "Organic Spa Vanity 08",
+    "category": "vanity",
+    "price": 1090,
+    "width": 800,
+    "depth": 450,
+    "height": 610,
+    "description": "Synthetic organic spa vanity for research evaluation.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-002"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-009",
+    "model_number": "SYN-VAN-009",
+    "name": "Contemporary Vanity 09",
+    "category": "vanity",
+    "price": 1145,
+    "width": 900,
+    "depth": 490,
+    "height": 550,
+    "description": "Synthetic contemporary vanity for research evaluation.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-001"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-010",
+    "model_number": "SYN-VAN-010",
+    "name": "Classic Vanity 10",
+    "category": "vanity",
+    "price": 1200,
+    "width": 1000,
+    "depth": 530,
+    "height": 580,
+    "description": "Synthetic classic vanity for research evaluation.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-002"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-011",
+    "model_number": "SYN-VAN-011",
+    "name": "Japanese Zen Vanity 11",
+    "category": "vanity",
+    "price": 1255,
+    "width": 1100,
+    "depth": 570,
+    "height": 610,
+    "description": "Synthetic japanese zen vanity for research evaluation.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-002"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-012",
+    "model_number": "SYN-VAN-012",
+    "name": "Modern Vanity 12",
+    "category": "vanity",
+    "price": 1310,
+    "width": 600,
+    "depth": 450,
+    "height": 550,
+    "description": "Synthetic modern vanity for research evaluation.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Matte White",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-001"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-013",
+    "model_number": "SYN-VAN-013",
+    "name": "Organic Spa Vanity 13",
+    "category": "vanity",
+    "price": 1365,
+    "width": 700,
+    "depth": 490,
+    "height": 580,
+    "description": "Synthetic organic spa vanity for research evaluation.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-002"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-014",
+    "model_number": "SYN-VAN-014",
+    "name": "Contemporary Vanity 14",
+    "category": "vanity",
+    "price": 1420,
+    "width": 800,
+    "depth": 530,
+    "height": 610,
+    "description": "Synthetic contemporary vanity for research evaluation.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-002"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-015",
+    "model_number": "SYN-VAN-015",
+    "name": "Classic Vanity 15",
+    "category": "vanity",
+    "price": 1475,
+    "width": 900,
+    "depth": 570,
+    "height": 550,
+    "description": "Synthetic classic vanity for research evaluation.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-001"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-016",
+    "model_number": "SYN-VAN-016",
+    "name": "Japanese Zen Vanity 16",
+    "category": "vanity",
+    "price": 1530,
+    "width": 1000,
+    "depth": 450,
+    "height": 580,
+    "description": "Synthetic japanese zen vanity for research evaluation.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-002"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-017",
+    "model_number": "SYN-VAN-017",
+    "name": "Modern Vanity 17",
+    "category": "vanity",
+    "price": 1585,
+    "width": 1100,
+    "depth": 490,
+    "height": 610,
+    "description": "Synthetic modern vanity for research evaluation.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Matte White",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-002"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-018",
+    "model_number": "SYN-VAN-018",
+    "name": "Organic Spa Vanity 18",
+    "category": "vanity",
+    "price": 1640,
+    "width": 600,
+    "depth": 530,
+    "height": 550,
+    "description": "Synthetic organic spa vanity for research evaluation.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-005"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-019",
+    "model_number": "SYN-VAN-019",
+    "name": "Contemporary Vanity 19",
+    "category": "vanity",
+    "price": 1695,
+    "width": 700,
+    "depth": 570,
+    "height": 580,
+    "description": "Synthetic contemporary vanity for research evaluation.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-002"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-020",
+    "model_number": "SYN-VAN-020",
+    "name": "Classic Vanity 20",
+    "category": "vanity",
+    "price": 1750,
+    "width": 800,
+    "depth": 450,
+    "height": 610,
+    "description": "Synthetic classic vanity for research evaluation.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-002"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-021",
+    "model_number": "SYN-VAN-021",
+    "name": "Japanese Zen Vanity 21",
+    "category": "vanity",
+    "price": 1805,
+    "width": 900,
+    "depth": 490,
+    "height": 550,
+    "description": "Synthetic japanese zen vanity for research evaluation.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-001"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-022",
+    "model_number": "SYN-VAN-022",
+    "name": "Modern Vanity 22",
+    "category": "vanity",
+    "price": 1860,
+    "width": 1000,
+    "depth": 530,
+    "height": 580,
+    "description": "Synthetic modern vanity for research evaluation.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Matte White",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-002"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-023",
+    "model_number": "SYN-VAN-023",
+    "name": "Organic Spa Vanity 23",
+    "category": "vanity",
+    "price": 1915,
+    "width": 1100,
+    "depth": 570,
+    "height": 610,
+    "description": "Synthetic organic spa vanity for research evaluation.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-002"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-024",
+    "model_number": "SYN-VAN-024",
+    "name": "Contemporary Vanity 24",
+    "category": "vanity",
+    "price": 1970,
+    "width": 600,
+    "depth": 450,
+    "height": 550,
+    "description": "Synthetic contemporary vanity for research evaluation.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-001"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-VAN-025",
+    "model_number": "SYN-VAN-025",
+    "name": "Classic Vanity 25",
+    "category": "vanity",
+    "price": 2025,
+    "width": 700,
+    "depth": 490,
+    "height": 580,
+    "description": "Synthetic classic vanity for research evaluation.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-002"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-001",
+    "model_number": "SYN-FAU-001",
+    "name": "Organic Spa Faucet 01",
+    "category": "faucet",
+    "price": 198,
+    "width": 80,
+    "depth": 200,
+    "height": 305,
+    "description": "Synthetic organic spa faucet with single-hole configuration.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "single-hole",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": [
+      "SYN-VAN-001"
+    ]
+  },
+  {
+    "id": "SYN-FAU-002",
+    "model_number": "SYN-FAU-002",
+    "name": "Contemporary Faucet 02",
+    "category": "faucet",
+    "price": 216,
+    "width": 80,
+    "depth": 220,
+    "height": 330,
+    "description": "Synthetic contemporary faucet with widespread configuration.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "widespread",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-003",
+    "model_number": "SYN-FAU-003",
+    "name": "Classic Faucet 03",
+    "category": "faucet",
+    "price": 234,
+    "width": 80,
+    "depth": 180,
+    "height": 355,
+    "description": "Synthetic classic faucet with single-hole configuration.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "single-hole",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-004",
+    "model_number": "SYN-FAU-004",
+    "name": "Japanese Zen Faucet 04",
+    "category": "faucet",
+    "price": 252,
+    "width": 80,
+    "depth": 200,
+    "height": 280,
+    "description": "Synthetic japanese zen faucet with widespread configuration.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Matte White",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "widespread",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-005",
+    "model_number": "SYN-FAU-005",
+    "name": "Modern Faucet 05",
+    "category": "faucet",
+    "price": 270,
+    "width": 80,
+    "depth": 220,
+    "height": 305,
+    "description": "Synthetic modern faucet with single-hole configuration.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "single-hole",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-006",
+    "model_number": "SYN-FAU-006",
+    "name": "Organic Spa Faucet 06",
+    "category": "faucet",
+    "price": 288,
+    "width": 80,
+    "depth": 180,
+    "height": 330,
+    "description": "Synthetic organic spa faucet with widespread configuration.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "widespread",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-007",
+    "model_number": "SYN-FAU-007",
+    "name": "Contemporary Faucet 07",
+    "category": "faucet",
+    "price": 306,
+    "width": 80,
+    "depth": 200,
+    "height": 355,
+    "description": "Synthetic contemporary faucet with single-hole configuration.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "single-hole",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-008",
+    "model_number": "SYN-FAU-008",
+    "name": "Classic Faucet 08",
+    "category": "faucet",
+    "price": 324,
+    "width": 80,
+    "depth": 220,
+    "height": 280,
+    "description": "Synthetic classic faucet with widespread configuration.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "widespread",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-009",
+    "model_number": "SYN-FAU-009",
+    "name": "Japanese Zen Faucet 09",
+    "category": "faucet",
+    "price": 342,
+    "width": 80,
+    "depth": 180,
+    "height": 305,
+    "description": "Synthetic japanese zen faucet with single-hole configuration.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Matte White",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "single-hole",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-010",
+    "model_number": "SYN-FAU-010",
+    "name": "Modern Faucet 10",
+    "category": "faucet",
+    "price": 360,
+    "width": 80,
+    "depth": 200,
+    "height": 330,
+    "description": "Synthetic modern faucet with widespread configuration.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "widespread",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-011",
+    "model_number": "SYN-FAU-011",
+    "name": "Organic Spa Faucet 11",
+    "category": "faucet",
+    "price": 378,
+    "width": 80,
+    "depth": 220,
+    "height": 355,
+    "description": "Synthetic organic spa faucet with single-hole configuration.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "single-hole",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-012",
+    "model_number": "SYN-FAU-012",
+    "name": "Contemporary Faucet 12",
+    "category": "faucet",
+    "price": 396,
+    "width": 80,
+    "depth": 180,
+    "height": 280,
+    "description": "Synthetic contemporary faucet with widespread configuration.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "widespread",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-013",
+    "model_number": "SYN-FAU-013",
+    "name": "Classic Faucet 13",
+    "category": "faucet",
+    "price": 414,
+    "width": 80,
+    "depth": 200,
+    "height": 305,
+    "description": "Synthetic classic faucet with single-hole configuration.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "single-hole",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-014",
+    "model_number": "SYN-FAU-014",
+    "name": "Japanese Zen Faucet 14",
+    "category": "faucet",
+    "price": 432,
+    "width": 80,
+    "depth": 220,
+    "height": 330,
+    "description": "Synthetic japanese zen faucet with widespread configuration.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Matte White",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "widespread",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-015",
+    "model_number": "SYN-FAU-015",
+    "name": "Modern Faucet 15",
+    "category": "faucet",
+    "price": 450,
+    "width": 80,
+    "depth": 180,
+    "height": 355,
+    "description": "Synthetic modern faucet with single-hole configuration.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "single-hole",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-016",
+    "model_number": "SYN-FAU-016",
+    "name": "Organic Spa Faucet 16",
+    "category": "faucet",
+    "price": 468,
+    "width": 80,
+    "depth": 200,
+    "height": 280,
+    "description": "Synthetic organic spa faucet with widespread configuration.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "widespread",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-017",
+    "model_number": "SYN-FAU-017",
+    "name": "Contemporary Faucet 17",
+    "category": "faucet",
+    "price": 486,
+    "width": 80,
+    "depth": 220,
+    "height": 305,
+    "description": "Synthetic contemporary faucet with single-hole configuration.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "single-hole",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-018",
+    "model_number": "SYN-FAU-018",
+    "name": "Classic Faucet 18",
+    "category": "faucet",
+    "price": 504,
+    "width": 80,
+    "depth": 180,
+    "height": 330,
+    "description": "Synthetic classic faucet with widespread configuration.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "widespread",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-019",
+    "model_number": "SYN-FAU-019",
+    "name": "Japanese Zen Faucet 19",
+    "category": "faucet",
+    "price": 522,
+    "width": 80,
+    "depth": 200,
+    "height": 355,
+    "description": "Synthetic japanese zen faucet with single-hole configuration.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Matte White",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "single-hole",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-020",
+    "model_number": "SYN-FAU-020",
+    "name": "Modern Faucet 20",
+    "category": "faucet",
+    "price": 540,
+    "width": 80,
+    "depth": 220,
+    "height": 280,
+    "description": "Synthetic modern faucet with widespread configuration.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "widespread",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-021",
+    "model_number": "SYN-FAU-021",
+    "name": "Organic Spa Faucet 21",
+    "category": "faucet",
+    "price": 558,
+    "width": 80,
+    "depth": 180,
+    "height": 305,
+    "description": "Synthetic organic spa faucet with single-hole configuration.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "single-hole",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-022",
+    "model_number": "SYN-FAU-022",
+    "name": "Contemporary Faucet 22",
+    "category": "faucet",
+    "price": 576,
+    "width": 80,
+    "depth": 200,
+    "height": 330,
+    "description": "Synthetic contemporary faucet with widespread configuration.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "widespread",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-023",
+    "model_number": "SYN-FAU-023",
+    "name": "Classic Faucet 23",
+    "category": "faucet",
+    "price": 594,
+    "width": 80,
+    "depth": 220,
+    "height": 355,
+    "description": "Synthetic classic faucet with single-hole configuration.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "single-hole",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-024",
+    "model_number": "SYN-FAU-024",
+    "name": "Japanese Zen Faucet 24",
+    "category": "faucet",
+    "price": 612,
+    "width": 80,
+    "depth": 180,
+    "height": 280,
+    "description": "Synthetic japanese zen faucet with widespread configuration.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Matte White",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "widespread",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-FAU-025",
+    "model_number": "SYN-FAU-025",
+    "name": "Modern Faucet 25",
+    "category": "faucet",
+    "price": 4900,
+    "width": 80,
+    "depth": 200,
+    "height": 305,
+    "description": "Synthetic modern faucet with single-hole configuration.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "deck_mounted",
+    "faucet_configuration": "single-hole",
+    "clearance_requirements": {
+      "front": 300,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply"
+    ],
+    "required_accessories": [
+      "SYN-ACC-003"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-001",
+    "model_number": "SYN-TOI-001",
+    "name": "Contemporary Toilet 01",
+    "category": "toilet",
+    "price": 748,
+    "width": 380,
+    "depth": 675,
+    "height": 730,
+    "description": "Synthetic contemporary toilet.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-002",
+    "model_number": "SYN-TOI-002",
+    "name": "Classic Toilet 02",
+    "category": "toilet",
+    "price": 796,
+    "width": 400,
+    "depth": 700,
+    "height": 700,
+    "description": "Synthetic classic toilet.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-003",
+    "model_number": "SYN-TOI-003",
+    "name": "Japanese Zen Toilet 03",
+    "category": "toilet",
+    "price": 844,
+    "width": 360,
+    "depth": 725,
+    "height": 730,
+    "description": "Synthetic japanese zen toilet.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "wall_hung",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-004",
+    "model_number": "SYN-TOI-004",
+    "name": "Modern Toilet 04",
+    "category": "toilet",
+    "price": 892,
+    "width": 380,
+    "depth": 650,
+    "height": 700,
+    "description": "Synthetic modern toilet.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-005",
+    "model_number": "SYN-TOI-005",
+    "name": "Organic Spa Toilet 05",
+    "category": "toilet",
+    "price": 940,
+    "width": 400,
+    "depth": 675,
+    "height": 730,
+    "description": "Synthetic organic spa toilet.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Matte White",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-006",
+    "model_number": "SYN-TOI-006",
+    "name": "Contemporary Toilet 06",
+    "category": "toilet",
+    "price": 988,
+    "width": 360,
+    "depth": 700,
+    "height": 700,
+    "description": "Synthetic contemporary toilet.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "wall_hung",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-007",
+    "model_number": "SYN-TOI-007",
+    "name": "Classic Toilet 07",
+    "category": "toilet",
+    "price": 1036,
+    "width": 380,
+    "depth": 725,
+    "height": 730,
+    "description": "Synthetic classic toilet.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-008",
+    "model_number": "SYN-TOI-008",
+    "name": "Japanese Zen Toilet 08",
+    "category": "toilet",
+    "price": 1084,
+    "width": 400,
+    "depth": 650,
+    "height": 700,
+    "description": "Synthetic japanese zen toilet.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain",
+      "electrical"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004",
+      "SYN-ACC-005"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-009",
+    "model_number": "SYN-TOI-009",
+    "name": "Modern Toilet 09",
+    "category": "toilet",
+    "price": 1132,
+    "width": 360,
+    "depth": 675,
+    "height": 730,
+    "description": "Synthetic modern toilet.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "wall_hung",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-010",
+    "model_number": "SYN-TOI-010",
+    "name": "Organic Spa Toilet 10",
+    "category": "toilet",
+    "price": 1180,
+    "width": 380,
+    "depth": 700,
+    "height": 700,
+    "description": "Synthetic organic spa toilet.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Matte White",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-011",
+    "model_number": "SYN-TOI-011",
+    "name": "Contemporary Toilet 11",
+    "category": "toilet",
+    "price": 1228,
+    "width": 400,
+    "depth": 725,
+    "height": 730,
+    "description": "Synthetic contemporary toilet.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-012",
+    "model_number": "SYN-TOI-012",
+    "name": "Classic Toilet 12",
+    "category": "toilet",
+    "price": 1276,
+    "width": 360,
+    "depth": 650,
+    "height": 700,
+    "description": "Synthetic classic toilet.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "wall_hung",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-013",
+    "model_number": "SYN-TOI-013",
+    "name": "Japanese Zen Toilet 13",
+    "category": "toilet",
+    "price": 1324,
+    "width": 380,
+    "depth": 675,
+    "height": 730,
+    "description": "Synthetic japanese zen toilet.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-014",
+    "model_number": "SYN-TOI-014",
+    "name": "Modern Toilet 14",
+    "category": "toilet",
+    "price": 1372,
+    "width": 400,
+    "depth": 700,
+    "height": 700,
+    "description": "Synthetic modern toilet.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-015",
+    "model_number": "SYN-TOI-015",
+    "name": "Organic Spa Toilet 15",
+    "category": "toilet",
+    "price": 1420,
+    "width": 360,
+    "depth": 725,
+    "height": 730,
+    "description": "Synthetic organic spa toilet.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Matte White",
+    "installation_type": "wall_hung",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-016",
+    "model_number": "SYN-TOI-016",
+    "name": "Contemporary Toilet 16",
+    "category": "toilet",
+    "price": 1468,
+    "width": 380,
+    "depth": 650,
+    "height": 700,
+    "description": "Synthetic contemporary toilet.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-017",
+    "model_number": "SYN-TOI-017",
+    "name": "Classic Toilet 17",
+    "category": "toilet",
+    "price": 1516,
+    "width": 400,
+    "depth": 675,
+    "height": 730,
+    "description": "Synthetic classic toilet.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-018",
+    "model_number": "SYN-TOI-018",
+    "name": "Japanese Zen Toilet 18",
+    "category": "toilet",
+    "price": 1564,
+    "width": 360,
+    "depth": 700,
+    "height": 700,
+    "description": "Synthetic japanese zen toilet.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "wall_hung",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain",
+      "electrical"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004",
+      "SYN-ACC-005"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-019",
+    "model_number": "SYN-TOI-019",
+    "name": "Modern Toilet 19",
+    "category": "toilet",
+    "price": 1612,
+    "width": 380,
+    "depth": 725,
+    "height": 730,
+    "description": "Synthetic modern toilet.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-020",
+    "model_number": "SYN-TOI-020",
+    "name": "Organic Spa Toilet 20",
+    "category": "toilet",
+    "price": 1660,
+    "width": 400,
+    "depth": 650,
+    "height": 700,
+    "description": "Synthetic organic spa toilet.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Matte White",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-021",
+    "model_number": "SYN-TOI-021",
+    "name": "Contemporary Toilet 21",
+    "category": "toilet",
+    "price": 1708,
+    "width": 360,
+    "depth": 675,
+    "height": 730,
+    "description": "Synthetic contemporary toilet.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "wall_hung",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-022",
+    "model_number": "SYN-TOI-022",
+    "name": "Classic Toilet 22",
+    "category": "toilet",
+    "price": 1756,
+    "width": 380,
+    "depth": 700,
+    "height": 700,
+    "description": "Synthetic classic toilet.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-023",
+    "model_number": "SYN-TOI-023",
+    "name": "Japanese Zen Toilet 23",
+    "category": "toilet",
+    "price": 1804,
+    "width": 400,
+    "depth": 725,
+    "height": 730,
+    "description": "Synthetic japanese zen toilet.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-024",
+    "model_number": "SYN-TOI-024",
+    "name": "Modern Toilet 24",
+    "category": "toilet",
+    "price": 1852,
+    "width": 360,
+    "depth": 650,
+    "height": 700,
+    "description": "Synthetic modern toilet.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "wall_hung",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-TOI-025",
+    "model_number": "SYN-TOI-025",
+    "name": "Organic Spa Toilet 25",
+    "category": "toilet",
+    "price": 1900,
+    "width": 380,
+    "depth": 675,
+    "height": 730,
+    "description": "Synthetic organic spa toilet.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Matte White",
+    "installation_type": "floor_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 750,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-004"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-001",
+    "model_number": "SYN-SHO-001",
+    "name": "Classic Shower 01",
+    "category": "shower",
+    "price": 965,
+    "width": 900,
+    "depth": 900,
+    "height": 2100,
+    "description": "Synthetic classic shower system.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-002",
+    "model_number": "SYN-SHO-002",
+    "name": "Japanese Zen Shower 02",
+    "category": "shower",
+    "price": 1030,
+    "width": 1000,
+    "depth": 1000,
+    "height": 2100,
+    "description": "Synthetic japanese zen shower system.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-003",
+    "model_number": "SYN-SHO-003",
+    "name": "Modern Shower 03",
+    "category": "shower",
+    "price": 1095,
+    "width": 1100,
+    "depth": 800,
+    "height": 2100,
+    "description": "Synthetic modern shower system.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Matte White",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-004",
+    "model_number": "SYN-SHO-004",
+    "name": "Organic Spa Shower 04",
+    "category": "shower",
+    "price": 1160,
+    "width": 800,
+    "depth": 900,
+    "height": 2100,
+    "description": "Synthetic organic spa shower system.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-005",
+    "model_number": "SYN-SHO-005",
+    "name": "Contemporary Shower 05",
+    "category": "shower",
+    "price": 1225,
+    "width": 900,
+    "depth": 1000,
+    "height": 2100,
+    "description": "Synthetic contemporary shower system.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-006",
+    "model_number": "SYN-SHO-006",
+    "name": "Classic Shower 06",
+    "category": "shower",
+    "price": 1290,
+    "width": 1000,
+    "depth": 800,
+    "height": 2100,
+    "description": "Synthetic classic shower system.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-007",
+    "model_number": "SYN-SHO-007",
+    "name": "Japanese Zen Shower 07",
+    "category": "shower",
+    "price": 1355,
+    "width": 1100,
+    "depth": 900,
+    "height": 2100,
+    "description": "Synthetic japanese zen shower system.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain",
+      "electrical"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006",
+      "SYN-ACC-005"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-008",
+    "model_number": "SYN-SHO-008",
+    "name": "Modern Shower 08",
+    "category": "shower",
+    "price": 1420,
+    "width": 800,
+    "depth": 1000,
+    "height": 2100,
+    "description": "Synthetic modern shower system.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Matte White",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-009",
+    "model_number": "SYN-SHO-009",
+    "name": "Organic Spa Shower 09",
+    "category": "shower",
+    "price": 1485,
+    "width": 900,
+    "depth": 800,
+    "height": 2100,
+    "description": "Synthetic organic spa shower system.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-010",
+    "model_number": "SYN-SHO-010",
+    "name": "Contemporary Shower 10",
+    "category": "shower",
+    "price": 1550,
+    "width": 1000,
+    "depth": 900,
+    "height": 2100,
+    "description": "Synthetic contemporary shower system.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-011",
+    "model_number": "SYN-SHO-011",
+    "name": "Classic Shower 11",
+    "category": "shower",
+    "price": 1615,
+    "width": 1100,
+    "depth": 1000,
+    "height": 2100,
+    "description": "Synthetic classic shower system.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-012",
+    "model_number": "SYN-SHO-012",
+    "name": "Japanese Zen Shower 12",
+    "category": "shower",
+    "price": 1680,
+    "width": 800,
+    "depth": 800,
+    "height": 2100,
+    "description": "Synthetic japanese zen shower system.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-013",
+    "model_number": "SYN-SHO-013",
+    "name": "Modern Shower 13",
+    "category": "shower",
+    "price": 1745,
+    "width": 900,
+    "depth": 900,
+    "height": 2100,
+    "description": "Synthetic modern shower system.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Matte White",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-014",
+    "model_number": "SYN-SHO-014",
+    "name": "Organic Spa Shower 14",
+    "category": "shower",
+    "price": 1810,
+    "width": 1000,
+    "depth": 1000,
+    "height": 2100,
+    "description": "Synthetic organic spa shower system.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-015",
+    "model_number": "SYN-SHO-015",
+    "name": "Contemporary Shower 15",
+    "category": "shower",
+    "price": 1875,
+    "width": 1100,
+    "depth": 800,
+    "height": 2100,
+    "description": "Synthetic contemporary shower system.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-016",
+    "model_number": "SYN-SHO-016",
+    "name": "Classic Shower 16",
+    "category": "shower",
+    "price": 1940,
+    "width": 800,
+    "depth": 900,
+    "height": 2100,
+    "description": "Synthetic classic shower system.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-017",
+    "model_number": "SYN-SHO-017",
+    "name": "Japanese Zen Shower 17",
+    "category": "shower",
+    "price": 2005,
+    "width": 900,
+    "depth": 1000,
+    "height": 2100,
+    "description": "Synthetic japanese zen shower system.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain",
+      "electrical"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006",
+      "SYN-ACC-005"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-018",
+    "model_number": "SYN-SHO-018",
+    "name": "Modern Shower 18",
+    "category": "shower",
+    "price": 2070,
+    "width": 1000,
+    "depth": 800,
+    "height": 2100,
+    "description": "Synthetic modern shower system.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Matte White",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-019",
+    "model_number": "SYN-SHO-019",
+    "name": "Organic Spa Shower 19",
+    "category": "shower",
+    "price": 2135,
+    "width": 1100,
+    "depth": 900,
+    "height": 2100,
+    "description": "Synthetic organic spa shower system.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-020",
+    "model_number": "SYN-SHO-020",
+    "name": "Contemporary Shower 20",
+    "category": "shower",
+    "price": 2200,
+    "width": 800,
+    "depth": 1000,
+    "height": 2100,
+    "description": "Synthetic contemporary shower system.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-021",
+    "model_number": "SYN-SHO-021",
+    "name": "Classic Shower 21",
+    "category": "shower",
+    "price": 2265,
+    "width": 900,
+    "depth": 800,
+    "height": 2100,
+    "description": "Synthetic classic shower system.",
+    "style_tags": [
+      "classic",
+      "timeless"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-022",
+    "model_number": "SYN-SHO-022",
+    "name": "Japanese Zen Shower 22",
+    "category": "shower",
+    "price": 2330,
+    "width": 1000,
+    "depth": 900,
+    "height": 2100,
+    "description": "Synthetic japanese zen shower system.",
+    "style_tags": [
+      "japanese-zen",
+      "warm",
+      "minimal"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-023",
+    "model_number": "SYN-SHO-023",
+    "name": "Modern Shower 23",
+    "category": "shower",
+    "price": 2395,
+    "width": 1100,
+    "depth": 1000,
+    "height": 2100,
+    "description": "Synthetic modern shower system.",
+    "style_tags": [
+      "modern",
+      "minimal",
+      "clean"
+    ],
+    "finish": "Matte White",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-024",
+    "model_number": "SYN-SHO-024",
+    "name": "Organic Spa Shower 24",
+    "category": "shower",
+    "price": 2460,
+    "width": 800,
+    "depth": 800,
+    "height": 2100,
+    "description": "Synthetic organic spa shower system.",
+    "style_tags": [
+      "spa",
+      "organic",
+      "warm"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-SHO-025",
+    "model_number": "SYN-SHO-025",
+    "name": "Contemporary Shower 25",
+    "category": "shower",
+    "price": 2525,
+    "width": 900,
+    "depth": 900,
+    "height": 2100,
+    "description": "Synthetic contemporary shower system.",
+    "style_tags": [
+      "contemporary",
+      "refined"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 700,
+      "side": 100
+    },
+    "infrastructure_requirements": [
+      "water_supply",
+      "drain"
+    ],
+    "required_accessories": [
+      "SYN-ACC-006"
+    ],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-001",
+    "model_number": "SYN-ACC-001",
+    "name": "Bottle Shelf 01",
+    "category": "accessory",
+    "price": 54,
+    "width": 150,
+    "depth": 60,
+    "height": 130,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-002",
+    "model_number": "SYN-ACC-002",
+    "name": "Towel Bar 02",
+    "category": "accessory",
+    "price": 63,
+    "width": 200,
+    "depth": 80,
+    "height": 160,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Matte White",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-003",
+    "model_number": "SYN-ACC-003",
+    "name": "Mirror 03",
+    "category": "accessory",
+    "price": 72,
+    "width": 250,
+    "depth": 40,
+    "height": 190,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-004",
+    "model_number": "SYN-ACC-004",
+    "name": "Robe Hook 04",
+    "category": "accessory",
+    "price": 81,
+    "width": 100,
+    "depth": 60,
+    "height": 220,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-005",
+    "model_number": "SYN-ACC-005",
+    "name": "Drain Cover 05",
+    "category": "accessory",
+    "price": 90,
+    "width": 150,
+    "depth": 80,
+    "height": 100,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-006",
+    "model_number": "SYN-ACC-006",
+    "name": "Bottle Shelf 06",
+    "category": "accessory",
+    "price": 99,
+    "width": 200,
+    "depth": 40,
+    "height": 130,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-007",
+    "model_number": "SYN-ACC-007",
+    "name": "Towel Bar 07",
+    "category": "accessory",
+    "price": 108,
+    "width": 250,
+    "depth": 60,
+    "height": 160,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Matte White",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-008",
+    "model_number": "SYN-ACC-008",
+    "name": "Mirror 08",
+    "category": "accessory",
+    "price": 117,
+    "width": 100,
+    "depth": 80,
+    "height": 190,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-009",
+    "model_number": "SYN-ACC-009",
+    "name": "Robe Hook 09",
+    "category": "accessory",
+    "price": 126,
+    "width": 150,
+    "depth": 40,
+    "height": 220,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-010",
+    "model_number": "SYN-ACC-010",
+    "name": "Drain Cover 10",
+    "category": "accessory",
+    "price": 135,
+    "width": 200,
+    "depth": 60,
+    "height": 100,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-011",
+    "model_number": "SYN-ACC-011",
+    "name": "Bottle Shelf 11",
+    "category": "accessory",
+    "price": 144,
+    "width": 250,
+    "depth": 80,
+    "height": 130,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-012",
+    "model_number": "SYN-ACC-012",
+    "name": "Towel Bar 12",
+    "category": "accessory",
+    "price": 153,
+    "width": 100,
+    "depth": 40,
+    "height": 160,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Matte White",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-013",
+    "model_number": "SYN-ACC-013",
+    "name": "Mirror 13",
+    "category": "accessory",
+    "price": 162,
+    "width": 150,
+    "depth": 60,
+    "height": 190,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-014",
+    "model_number": "SYN-ACC-014",
+    "name": "Robe Hook 14",
+    "category": "accessory",
+    "price": 171,
+    "width": 200,
+    "depth": 80,
+    "height": 220,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-015",
+    "model_number": "SYN-ACC-015",
+    "name": "Drain Cover 15",
+    "category": "accessory",
+    "price": 180,
+    "width": 250,
+    "depth": 40,
+    "height": 100,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-016",
+    "model_number": "SYN-ACC-016",
+    "name": "Bottle Shelf 16",
+    "category": "accessory",
+    "price": 189,
+    "width": 100,
+    "depth": 60,
+    "height": 130,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Natural Oak",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-017",
+    "model_number": "SYN-ACC-017",
+    "name": "Towel Bar 17",
+    "category": "accessory",
+    "price": 198,
+    "width": 150,
+    "depth": 80,
+    "height": 160,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Matte White",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-018",
+    "model_number": "SYN-ACC-018",
+    "name": "Mirror 18",
+    "category": "accessory",
+    "price": 207,
+    "width": 200,
+    "depth": 40,
+    "height": 190,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Brushed Nickel",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-019",
+    "model_number": "SYN-ACC-019",
+    "name": "Robe Hook 19",
+    "category": "accessory",
+    "price": 216,
+    "width": 250,
+    "depth": 60,
+    "height": 220,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Matte Black",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [],
+    "required_accessories": [],
+    "compatibility": []
+  },
+  {
+    "id": "SYN-ACC-020",
+    "model_number": "SYN-ACC-020",
+    "name": "Drain Cover 20",
+    "category": "accessory",
+    "price": 225,
+    "width": 100,
+    "depth": 80,
+    "height": 100,
+    "description": "Synthetic bathroom accessory.",
+    "style_tags": [
+      "minimal",
+      "functional"
+    ],
+    "finish": "Polished Chrome",
+    "installation_type": "wall_mounted",
+    "faucet_configuration": null,
+    "clearance_requirements": {
+      "front": 600,
+      "side": 150
+    },
+    "infrastructure_requirements": [
+      "electrical"
+    ],
+    "required_accessories": [],
+    "compatibility": []
+  }
+]

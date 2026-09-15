@@ -1,0 +1,9 @@
+Flask>=3.0,<4
+pydantic>=2.7,<3
+python-dotenv>=1.0,<2
+openai>=1.0,<3
+pytest>=8,<9
+neo4j>=5.0,<7
+sentence-transformers>=3.0,<6
+
+PuLP>=2.8,<4

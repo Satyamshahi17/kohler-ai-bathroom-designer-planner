@@ -1,0 +1,50 @@
+{
+  "id": "plan_01_small_south_door",
+  "description": "Small rectangular bathroom, south inward door, east window.",
+  "room": {
+    "width": 1800,
+    "depth": 2200,
+    "unit": "mm"
+  },
+  "door": {
+    "wall": "south",
+    "offset": 450,
+    "width": 750,
+    "hinge_position": "left",
+    "opening_direction": "inward",
+    "swing_angle": 90,
+    "swing_radius": 750
+  },
+  "windows": [
+    {
+      "wall": "east",
+      "offset": 500,
+      "width": 900
+    }
+  ],
+  "ventilation": [
+    {
+      "wall": "north",
+      "type": "exhaust_fan"
+    }
+  ],
+  "fixed_obstacles": [],
+  "existing_plumbing": [
+    {
+      "wall": "west",
+      "type": "supply",
+      "offset": 400
+    },
+    {
+      "wall": "north",
+      "type": "drain",
+      "offset": 300
+    }
+  ],
+  "existing_electrical": [
+    {
+      "wall": "east",
+      "offset": 1600
+    }
+  ]
+}

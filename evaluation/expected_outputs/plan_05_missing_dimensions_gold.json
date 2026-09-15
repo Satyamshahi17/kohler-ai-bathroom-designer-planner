@@ -1,0 +1,23 @@
+{
+  "room": {
+    "width": null,
+    "depth": null,
+    "unit": "mm"
+  },
+  "door": {
+    "wall": "south",
+    "offset": 400,
+    "width": 800,
+    "hinge_position": "right",
+    "opening_direction": "inward",
+    "swing_angle": null,
+    "swing_radius": null
+  },
+  "windows": [
+    {
+      "wall": "north",
+      "offset": 500,
+      "width": 900
+    }
+  ]
+}

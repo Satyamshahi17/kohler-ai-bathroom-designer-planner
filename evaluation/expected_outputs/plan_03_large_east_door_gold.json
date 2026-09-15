@@ -1,0 +1,28 @@
+{
+  "room": {
+    "width": 3600,
+    "depth": 3000,
+    "unit": "mm"
+  },
+  "door": {
+    "wall": "east",
+    "offset": 1000,
+    "width": 900,
+    "hinge_position": "top",
+    "opening_direction": "outward",
+    "swing_angle": 90,
+    "swing_radius": 900
+  },
+  "windows": [
+    {
+      "wall": "north",
+      "offset": 500,
+      "width": 1200
+    },
+    {
+      "wall": "west",
+      "offset": 700,
+      "width": 800
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+Convert the user's natural-language bathroom requirements into JSON with exactly these fields:
+{
+  "budget": number,
+  "theme": string,
+  "required_categories": ["vanity|faucet|toilet|shower|accessory"],
+  "preferences": [string],
+  "room_requirements": {},
+  "door_preferences": {}
+}
+
+Explicit user constraints are authoritative. Never invent a budget. If a value is absent, use
+an empty/default value rather than guessing. Normalize synonyms such as "wash basin" to vanity
+when appropriate, but preserve the user's intent.

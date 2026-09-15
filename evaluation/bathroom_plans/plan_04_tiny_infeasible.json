@@ -1,0 +1,29 @@
+{
+  "id": "plan_04_tiny_infeasible",
+  "description": "Tiny bathroom intended to trigger spatial infeasibility in evaluation.",
+  "room": {
+    "width": 1200,
+    "depth": 1500,
+    "unit": "mm"
+  },
+  "door": {
+    "wall": "south",
+    "offset": 200,
+    "width": 700,
+    "hinge_position": "left",
+    "opening_direction": "inward",
+    "swing_angle": 90,
+    "swing_radius": 700
+  },
+  "windows": [],
+  "ventilation": [],
+  "fixed_obstacles": [],
+  "existing_plumbing": [
+    {
+      "wall": "west",
+      "type": "water_supply",
+      "offset": 300
+    }
+  ],
+  "existing_electrical": []
+}
