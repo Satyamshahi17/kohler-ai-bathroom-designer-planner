@@ -1313,7 +1313,7 @@ real Kohler product specifications.
 
 **Satyam Kumar**
 
-B.Tech --- Computer Science & Engineering
+B.Tech Computer Science & Engineering
 
 Interests: Artificial Intelligence, Machine Learning, Computer Vision,
 NLP, Generative AI, Knowledge Graphs, Recommendation Systems, and
