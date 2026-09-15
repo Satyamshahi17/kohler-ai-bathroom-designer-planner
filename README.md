@@ -1,10 +1,4 @@
-import pypandoc
-from pathlib import Path
-
-root = Path("/mnt/data/kohler-ai-bathroom-designer")
-root.mkdir(parents=True, exist_ok=True)
-
-readme_md = r'''# Kohler AI Bathroom Planner and Designer
+# Kohler AI Bathroom Planner and Designer
 
 > An AI-assisted bathroom planning and product recommendation POC that combines multimodal spatial understanding, structured product knowledge, semantic retrieval, mathematical bundle optimization, deterministic geometry validation, layout refinement, and SVG-based 2D visualization.
 
