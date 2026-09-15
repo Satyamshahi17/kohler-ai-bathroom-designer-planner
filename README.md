@@ -185,9 +185,10 @@ accessories
 budget
         =
 feasible product bundle
+```
 
 ## System Architecture
-```text
+```
                          USER
               Image + Requirements + Budget
                            │
@@ -270,3 +271,4 @@ feasible product bundle
                          │
                          ▼
                        USER
+```
