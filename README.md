@@ -187,6 +187,8 @@ budget
 feasible product bundle
 ```
 
+---
+
 ## System Architecture
 ```
                          USER
@@ -272,3 +274,465 @@ feasible product bundle
                          ▼
                        USER
 ```
+---
+
+### Architectural Authority
+
+The project intentionally separates responsibilities:
+
+| Layer | Primary responsibility | Authority |
+|---|---|---|
+| Multimodal LLM | Interpret image and design intent | Proposal / extraction |
+| Semantic embeddings | Fuzzy aesthetic matching | Ranking signal |
+| Neo4j KG | Explicit product relationships | Hard product rules |
+| PuLP | Discrete bundle selection | Hard optimization constraints |
+| Geometry engine | Physical feasibility | Hard spatial authority |
+| SVG renderer | Visual representation | Deterministic output |
+| Flask | Application/API/UI integration | Orchestration/interface |
+
+---
+
+## Repository Structure
+
+```
+kohler-ai-bathroom-designer/
+│
+├── README.md                         # Project README / general documentation
+├── README_GITHUB.md                  # GitHub-focused project README
+├── .env.example                      # Example environment configuration
+├── requirements.txt                  # Python dependencies
+│
+├── app/
+│   ├── __init__.py                   # Python package initialization
+│   ├── main.py                       # Flask application entry point
+│   │
+│   ├── config/
+│   │   ├── __init__.py               # Configuration package
+│   │   ├── constants.py              # Shared application constants
+│   │   └── settings.py               # Environment-backed settings
+│   │
+│   ├── models/
+│   │   ├── __init__.py               # Model package
+│   │   ├── product.py                # Product data contract
+│   │   ├── user_constraints.py       # User requirement model
+│   │   ├── spatial_plan.py           # Spatial geometry/provenance model
+│   │   ├── layout.py                 # Layout and fixture placement models
+│   │   └── result.py                 # End-to-end result contract
+│   │
+│   ├── llm/
+│   │   ├── __init__.py               # LLM package
+│   │   ├── client.py                 # Provider abstraction + OpenAI adapter
+│   │   ├── vision.py                 # Multimodal spatial extraction
+│   │   ├── requirements.py           # Natural-language requirements parser
+│   │   ├── explainer.py              # Design explanation generation
+│   │   └── prompts/
+│   │       ├── requirements.txt      # Requirements parsing prompt
+│   │       └── spatial_extraction.txt# Spatial extraction prompt
+│   │
+│   ├── knowledge_graph/
+│   │   ├── __init__.py               # KG package
+│   │   ├── connection.py             # Neo4j driver/connection handling
+│   │   ├── schema.py                 # Neo4j constraints and schema
+│   │   ├── queries.py                # Cypher query definitions
+│   │   ├── rules_engine.py            # Deterministic KG rule interface
+│   │   └── seed.py                   # Synthetic catalog → Neo4j seeding
+│   │
+│   ├── products/
+│   │   ├── __init__.py               # Product package
+│   │   ├── catalog.py                # Catalog loading and normalization
+│   │   ├── embeddings.py             # Product semantic embedding index
+│   │   ├── validator.py              # Catalog integrity validation
+│   │   └── data/
+│   │       └── synthetic_products.json# Synthetic product catalog
+│   │
+│   ├── recommendation/
+│   │   ├── __init__.py               # Recommendation package
+│   │   ├── candidate_generation.py   # Per-category candidate generation
+│   │   ├── scoring.py                # Semantic/KG/preference scoring
+│   │   └── hybrid_ranker.py          # Hybrid recommendation ranking
+│   │
+│   ├── optimization/
+│   │   ├── __init__.py               # Optimization package
+│   │   ├── optimizer.py              # PuLP bundle optimization
+│   │   ├── constraints.py            # Optimization hard constraints
+│   │   └── accessories.py            # Accessory dependency/cost logic
+│   │
+│   ├── geometry/
+│   │   ├── __init__.py               # Geometry package
+│   │   ├── spatial_engine.py         # Coordinate/fixture geometry primitives
+│   │   ├── collision.py              # Fixture collision detection
+│   │   ├── clearance.py              # Required clearance validation
+│   │   ├── door.py                   # Door swing geometry
+│   │   ├── circulation.py             # Circulation checks
+│   │   ├── infrastructure.py         # Plumbing/electrical checks
+│   │   └── validator.py              # Unified geometry validator
+│   │
+│   ├── layout/
+│   │   ├── __init__.py               # Layout package
+│   │   ├── candidate_generator.py    # Multi-strategy layout generation
+│   │   ├── refinement.py             # Invalid-layout repair loop
+│   │   ├── scorer.py                 # Valid-layout scoring
+│   │   └── selector.py               # Best-valid-layout selection
+│   │
+│   ├── rendering/
+│   │   ├── __init__.py               # Rendering package
+│   │   ├── svg_renderer.py           # Deterministic SVG generation
+│   │   ├── dimensions.py             # SVG dimension annotations
+│   │   ├── symbols.py                # Door/window/fixture SVG symbols
+│   │   └── legend.py                 # SVG legend rendering
+│   │
+│   ├── evaluation/
+│   │   ├── __init__.py               # Evaluation package
+│   │   ├── evaluator.py              # Benchmark runner
+│   │   ├── metrics.py                # Evaluation metric calculations
+│   │   └── scenarios.py              # Synthetic benchmark scenarios
+│   │
+│   ├── pipeline/
+│   │   ├── __init__.py               # Pipeline package
+│   │   └── orchestrator.py           # End-to-end pipeline orchestration
+│   │
+│   └── api/
+│       ├── __init__.py               # API package
+│       ├── routes.py                 # Flask API routes
+│       └── schemas.py                # API request/response schemas
+│
+├── frontend/
+│   ├── templates/
+│   │   └── index.html                # Main interactive designer page
+│   │
+│   └── static/
+│       ├── css/
+│       │   └── style.css             # Frontend styling
+│       └── js/
+│           └── app.js                # Browser-side API/UI logic
+│
+├── evaluation/
+│   ├── bathroom_plans/               # Synthetic benchmark spatial plans
+│   └── expected_outputs/             # Gold spatial extraction outputs
+│
+├── tests/
+│   ├── test_foundation.py            # Foundation/model tests
+│   ├── test_catalog.py               # Catalog validation tests
+│   ├── test_synthetic_plans.py       # Synthetic-plan tests
+│   ├── test_kg.py                    # Knowledge Graph tests
+│   ├── test_recommendation.py        # Recommendation tests
+│   ├── test_optimizer.py             # PuLP optimization tests
+│   ├── test_requirements.py          # Requirements parser tests
+│   ├── test_vision.py                # Spatial extraction tests
+│   ├── test_geometry.py              # Geometry validation tests
+│   ├── test_layout.py                # Layout generation/refinement tests
+│   ├── test_rendering.py             # SVG renderer tests
+│   ├── test_evaluation.py            # Evaluation framework tests
+│   ├── test_pipeline.py              # Pipeline integration tests
+│   └── test_api.py                   # Flask API tests
+│
+└── scripts/
+    ├── generate_synthetic_catalog.py # Generate synthetic products
+    ├── generate_test_plans.py        # Generate synthetic bathroom plans
+    ├── preflight.py                  # Environment/dependency checks
+    ├── demo_offline.py               # Structured-input offline demo
+    └── run_evaluation.py             # Run evaluation benchmarks
+```
+
+---
+
+# Setup
+
+---
+
+## 1. Clone the repository
+
+```bash
+git clone <your-github-repository-url>
+cd kohler-ai-bathroom-designer
+```
+
+---
+
+## 2. Create a virtual environment
+
+### Windows
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+### macOS/Linux
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+---
+
+## 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 4. Configure environment variables
+
+Copy:
+
+```text
+.env.example
+```
+
+to:
+
+```text
+.env
+```
+
+Example:
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+OPENAI_MODEL=gpt-5.6-luna
+
+FLASK_ENV=development
+FLASK_DEBUG=1
+
+PRODUCT_CATALOG_MODE=synthetic
+
+NEO4J_URI=bolt://localhost:7687
+NEO4J_USERNAME=neo4j
+NEO4J_PASSWORD=your_neo4j_password
+```
+
+> **Security:** Keep `.env` private. Never commit API keys or database passwords to GitHub.
+
+The application is designed around an LLM provider abstraction, so another compatible multimodal provider can be integrated without changing the downstream recommendation, optimization, geometry, and rendering layers.
+
+---
+
+# Neo4j Setup
+
+---
+
+## 1. Install and start Neo4j
+
+Install and start a local **Neo4j 5.x** database.
+
+The default configuration expects:
+
+```text
+bolt://localhost:7687
+```
+
+with:
+
+```text
+username = neo4j
+password = your configured password
+```
+
+---
+
+## 2. Seed the synthetic product Knowledge Graph
+
+If the checkout contains the seeding script:
+
+```bash
+python scripts/seed_neo4j.py
+```
+
+If your local checkout does not expose that script, use the KG seeding module/API provided by the project version you are running.
+
+The graph represents product relationships such as:
+
+```text
+COMPATIBLE_WITH
+INCOMPATIBLE_WITH
+STYLED_AS
+HAS_FINISH
+REQUIRES_ACCESSORY
+REQUIRES_PLUMBING
+REQUIRES_DRAIN
+REQUIRES_WATER_SUPPLY
+REQUIRES_ELECTRICAL
+REQUIRES_INSTALLATION_ZONE
+```
+
+---
+
+# Usage
+
+---
+
+## 1. Run environment checks
+
+```bash
+python scripts/preflight.py
+```
+
+This checks whether the local environment has the dependencies and configuration required by the project.
+
+---
+
+## 2. Run tests
+
+```bash
+python -m pytest -q
+```
+
+Run the test suite before starting the full demo to catch configuration or dependency issues early.
+
+---
+
+## 3. Run the offline/demo pipeline
+
+The structured spatial-plan path can be used for deterministic development and testing without requiring image-based LLM extraction.
+
+```bash
+python scripts/demo_offline.py
+```
+
+This is useful for validating the recommendation, optimization, layout, geometry-validation, and SVG-rendering pipeline independently of multimodal image extraction.
+
+---
+
+## 4. Run the Flask application
+
+```bash
+python -m app.main
+```
+
+Then open:
+
+```text
+http://127.0.0.1:5000
+```
+
+The frontend accepts:
+
+- Bathroom image/plan
+- Budget
+- Theme
+- Required fixtures
+- User preferences
+
+The main design request uses:
+
+```http
+POST /api/design
+```
+
+Additional endpoints include:
+
+```http
+POST /api/recommend
+POST /api/layout
+POST /api/validate
+POST /api/replace
+GET  /api/result
+```
+
+---
+
+# Recommended Local Run Order
+
+---
+
+```text
+1. Create and activate .venv
+        ↓
+2. Install requirements.txt
+        ↓
+3. Configure .env
+        ↓
+4. Start Neo4j
+        ↓
+5. Seed the Knowledge Graph
+        ↓
+6. Run preflight checks
+        ↓
+7. Run tests
+        ↓
+8. Run offline demo
+        ↓
+9. Start Flask
+        ↓
+10. Open http://127.0.0.1:5000
+        ↓
+11. Upload bathroom image/plan
+        ↓
+12. Enter budget, theme, fixtures and preferences
+        ↓
+13. Generate the design
+```
+
+---
+
+# End-to-End Design Flow
+
+---
+
+The complete application is intended to follow this pipeline:
+
+```text
+Bathroom Image + User Requirements
+                ↓
+       Multimodal Spatial Extraction
+                ↓
+          User Constraints
+                ↓
+       Product Catalog + Neo4j KG
+                +
+       Semantic Product Retrieval
+                ↓
+        Hybrid Recommendation
+                ↓
+          PuLP Optimization
+                ↓
+            Top 3 Bundles
+                ↓
+       3–5 Layout Candidates
+                ↓
+      Deterministic Geometry Validation
+                ↓
+        Refinement of Invalid Layouts
+                ↓
+          Best Valid Layout
+                ↓
+        Deterministic SVG Renderer
+                ↓
+          Flask Interactive UI
+```
+
+---
+
+# Product Replacement Flow
+
+---
+
+The application also supports product replacement after an initial design:
+
+```text
+User selects product to replace
+                ↓
+Identify affected category
+                ↓
+Retrieve alternative products
+                ↓
+Check KG compatibility
+                ↓
+Recalculate accessories
+                ↓
+Re-optimize budget/bundle
+                ↓
+Recheck infrastructure constraints
+                ↓
+Regenerate affected layout candidates
+                ↓
+Run geometry validation
+                ↓
+Update deterministic SVG
+```
+
+This keeps the replacement workflow consistent with the same product, optimization, geometry, and rendering rules used by the initial design pipeline.
