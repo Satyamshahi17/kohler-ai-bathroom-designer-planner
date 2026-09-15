@@ -1,100 +1,122 @@
 # Kohler AI Bathroom Planner and Designer
 
-> An AI-assisted bathroom planning and product recommendation POC that combines multimodal spatial understanding, structured product knowledge, semantic retrieval, mathematical bundle optimization, deterministic geometry validation, layout refinement, and SVG-based 2D visualization.
+> An AI-assisted bathroom planning and product recommendation POC that
+> combines multimodal spatial understanding, structured product
+> knowledge, semantic retrieval, mathematical bundle optimization,
+> deterministic geometry validation, layout refinement, and SVG-based 2D
+> visualization.
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Flask-3.x-000000?style=flat-square&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
 [![Pydantic](https://img.shields.io/badge/Pydantic-2.x-E92063?style=flat-square)](https://docs.pydantic.dev/)
 [![Neo4j](https://img.shields.io/badge/Neo4j-5.x-008CC1?style=flat-square&logo=neo4j&logoColor=white)](https://neo4j.com/)
 [![PuLP](https://img.shields.io/badge/PuLP-ILP%20Optimization-3776AB?style=flat-square)](https://coin-or.github.io/pulp/)
-[![Sentence Transformers](https://img.shields.io/badge/Sentence--Transformers-Embeddings-FF6F00?style=flat-square)](https://www.sbert.net/)
+[![Sentence
+Transformers](https://img.shields.io/badge/Sentence--Transformers-Embeddings-FF6F00?style=flat-square)](https://www.sbert.net/)
 [![OpenAI](https://img.shields.io/badge/OpenAI-Multimodal%20LLM-412991?style=flat-square&logo=openai&logoColor=white)](https://platform.openai.com/)
 [![Jinja2](https://img.shields.io/badge/Jinja2-Templates-B41717?style=flat-square)](https://jinja.palletsprojects.com/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?style=flat-square&logo=javascript&logoColor=111111)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![SVG](https://img.shields.io/badge/SVG-Deterministic%202D%20Rendering-FFB13B?style=flat-square)](https://www.w3.org/Graphics/SVG/)
 
-**Core technologies:** Python, Flask, Pydantic, Neo4j, Cypher, PuLP, sentence-transformers, OpenAI multimodal API, Jinja2, HTML/CSS, Vanilla JavaScript, deterministic SVG rendering, pytest.
+**Core technologies:** Python, Flask, Pydantic, Neo4j, Cypher, PuLP,
+sentence-transformers, OpenAI multimodal API, Jinja2, HTML/CSS, Vanilla
+JavaScript, deterministic SVG rendering, pytest.
 
-**Data modes:** synthetic catalog for development/evaluation, with architecture prepared for a separate curated real-product mode.
+**Data modes:** synthetic catalog for development/evaluation, with
+architecture prepared for a separate curated real-product mode.
 
----
+------------------------------------------------------------------------
 
 ## Problem Statement
 
-Bathroom product selection and bathroom layout planning are usually treated as separate problems.
+Bathroom product selection and bathroom layout planning are usually
+treated as separate problems.
 
 A customer may know:
 
-- the approximate bathroom dimensions,
-- their budget,
-- the required fixtures,
-- a preferred design theme,
-- and a bathroom plan or image,
+-   the approximate bathroom dimensions,
+-   their budget,
+-   the required fixtures,
+-   a preferred design theme,
+-   and a bathroom plan or image,
 
 but still has to manually answer several difficult questions:
 
-1. Which products fit the desired aesthetic?
-2. Which products are mutually compatible?
-3. Which accessories are required for the selected products?
-4. Does the complete bundle remain within budget?
-5. Will the selected fixtures physically fit in the room?
-6. Will clearances, circulation, windows, and door swing remain usable?
-7. If a product is replaced, what else needs to change?
-8. Can the resulting design be communicated visually and explained clearly?
+1.  Which products fit the desired aesthetic?
+2.  Which products are mutually compatible?
+3.  Which accessories are required for the selected products?
+4.  Does the complete bundle remain within budget?
+5.  Will the selected fixtures physically fit in the room?
+6.  Will clearances, circulation, windows, and door swing remain usable?
+7.  If a product is replaced, what else needs to change?
+8.  Can the resulting design be communicated visually and explained
+    clearly?
 
-A purely semantic recommendation system can produce aesthetically attractive combinations that violate hard product or spatial constraints. A purely rule-based system can be consistent but weak at understanding natural-language preferences and design intent.
+A purely semantic recommendation system can produce aesthetically
+attractive combinations that violate hard product or spatial
+constraints. A purely rule-based system can be consistent but weak at
+understanding natural-language preferences and design intent.
 
-The project therefore treats bathroom planning as a **hybrid AI + optimization + deterministic geometry problem**.
+The project therefore treats bathroom planning as a **hybrid AI +
+optimization + deterministic geometry problem**.
 
----
+------------------------------------------------------------------------
 
 ## Solution
 
-The Kohler AI Bathroom Planner and Designer combines six complementary capabilities:
+The Kohler AI Bathroom Planner and Designer combines six complementary
+capabilities:
 
 ### 1. Multimodal spatial understanding
 
-A bathroom plan/image and user requirements are converted into structured representations.
+A bathroom plan/image and user requirements are converted into
+structured representations.
 
-The spatial extractor produces a `SpatialPlan` containing room dimensions, doors, windows, fixed obstacles, existing infrastructure, and proposed infrastructure.
+The spatial extractor produces a `SpatialPlan` containing room
+dimensions, doors, windows, fixed obstacles, existing infrastructure,
+and proposed infrastructure.
 
 Every extracted measurement can carry:
 
-- value
-- unit
-- source/provenance
-- confidence
+-   value
+-   unit
+-   source/provenance
+-   confidence
 
-The system explicitly avoids silently inventing missing dimensions or precise door-swing measurements.
+The system explicitly avoids silently inventing missing dimensions or
+precise door-swing measurements.
 
 ### 2. Product intelligence with Knowledge Graph + semantic retrieval
 
 The product catalog is represented through:
 
-- structured product attributes,
-- Neo4j relationships,
-- explicit compatibility/incompatibility rules,
-- theme relationships,
-- infrastructure requirements,
-- accessory dependencies.
+-   structured product attributes,
+-   Neo4j relationships,
+-   explicit compatibility/incompatibility rules,
+-   theme relationships,
+-   infrastructure requirements,
+-   accessory dependencies.
 
 Semantic embeddings provide fuzzy matching for preferences such as:
 
 > "warm, minimalist, spa-like, natural"
 
-while the Knowledge Graph remains authoritative for explicit relationships.
+while the Knowledge Graph remains authoritative for explicit
+relationships.
 
 ### 3. Hybrid recommendation
 
 Candidate products are ranked using:
 
-- semantic similarity,
-- KG/theme evidence,
-- user preference fit.
+-   semantic similarity,
+-   KG/theme evidence,
+-   user preference fit.
 
 Explicit incompatibilities are never overridden by semantic similarity.
 
-If a category has no explicit KG theme match, the system falls back to semantic ranking rather than incorrectly eliminating the entire category.
+If a category has no explicit KG theme match, the system falls back to
+semantic ranking rather than incorrectly eliminating the entire
+category.
 
 ### 4. PuLP bundle optimization
 
@@ -102,14 +124,16 @@ The optimizer selects complete product bundles under hard constraints.
 
 It handles:
 
-- one product per required category,
-- budget,
-- product incompatibilities,
-- required accessories,
-- accessory cost,
-- bundle ranking.
+-   one product per required category,
+-   budget,
+-   product incompatibilities,
+-   required accessories,
+-   accessory cost,
+-   bundle ranking.
 
-If no budget-feasible bundle exists, the system can identify the best fallback bundle and report the actual budget shortfall instead of pretending the bundle fits.
+If no budget-feasible bundle exists, the system can identify the best
+fallback bundle and report the actual budget shortfall instead of
+pretending the bundle fits.
 
 ### 5. Deterministic spatial validation + layout refinement
 
@@ -117,65 +141,73 @@ The LLM/layout generator proposes candidate fixture arrangements.
 
 A deterministic geometry engine then checks:
 
-- room bounds,
-- fixture collisions,
-- required clearances,
-- door swing,
-- windows,
-- fixed obstacles,
-- circulation,
-- infrastructure requirements.
+-   room bounds,
+-   fixture collisions,
+-   required clearances,
+-   door swing,
+-   windows,
+-   fixed obstacles,
+-   circulation,
+-   infrastructure requirements.
 
-Invalid layouts are passed through a bounded refinement loop and revalidated.
+Invalid layouts are passed through a bounded refinement loop and
+revalidated.
 
-Only layouts that pass hard spatial validation are eligible to become the final design.
+Only layouts that pass hard spatial validation are eligible to become
+the final design.
 
 ### 6. Deterministic SVG visualization
 
-The final validated layout is rendered using a deterministic Python SVG renderer.
+The final validated layout is rendered using a deterministic Python SVG
+renderer.
 
 The renderer draws:
 
-- room boundaries,
-- fixtures,
-- doors,
-- door swing,
-- windows,
-- dimensions,
-- labels,
-- legend.
+-   room boundaries,
+-   fixtures,
+-   doors,
+-   door swing,
+-   windows,
+-   dimensions,
+-   labels,
+-   legend.
 
 The same validated layout produces the same SVG representation.
 
----
+------------------------------------------------------------------------
 
 # Business Impact
 
 ## 1. AI in manufacturing and product ecosystems
 
-The project demonstrates how generative AI can move beyond text and image generation into a **constraint-aware product configuration workflow**.
+The project demonstrates how generative AI can move beyond text
+generation into a **constraint-aware product configuration workflow**.
 
 For a manufacturer such as Kohler, the same architecture can support:
 
-- guided product discovery,
-- product configuration,
-- compatibility-aware cross-selling,
-- accessory attachment,
-- design assistance,
-- spatial planning,
-- customer-specific recommendations.
+-   guided product discovery,
+-   product configuration,
+-   compatibility-aware cross-selling,
+-   accessory attachment,
+-   design assistance,
+-   spatial planning,
+-   customer-specific recommendations.
 
-The Knowledge Graph creates a machine-readable layer over product relationships, while the optimization layer converts recommendations into complete, constraint-aware bundles.
+The Knowledge Graph creates a machine-readable layer over product
+relationships, while the optimization layer converts recommendations
+into complete, constraint-aware bundles.
 
-This creates a bridge between **AI personalization and structured manufacturing/product knowledge**.
+This creates a bridge between **AI personalization and structured
+manufacturing/product knowledge**.
 
 ## 2. Recommendation engine
 
-Traditional recommendation systems often optimize relevance or similarity.
+Traditional recommendation systems often optimize relevance or
+similarity.
 
 This project adds hard product logic:
 
-```text
+``` text
 semantic relevance
         +
 explicit compatibility
@@ -187,114 +219,539 @@ budget
 feasible product bundle
 ```
 
----
+This is particularly valuable for bathroom products because a visually
+or semantically attractive recommendation can still be unusable when:
 
-## System Architecture
-```
-                         USER
-              Image + Requirements + Budget
-                           │
-                           ▼
-                ┌─────────────────────┐
-                │ Multimodal LLM      │
-                │                     │
-                │ • Requirement parse │
-                │ • Spatial extraction│
-                └──────────┬──────────┘
-                           │
-                 ┌─────────┴─────────┐
-                 ▼                   ▼
-        User Constraints       Spatial Plan
-                 │                   │
-                 └─────────┬─────────┘
-                           ▼
-              ┌───────────────────────┐
-              │ Product Intelligence  │
-              │                       │
-              │ Neo4j KG              │
-              │ +                     │
-              │ Semantic Embeddings   │
-              └───────────┬───────────┘
-                          ▼
-                  Candidate Products
-                          │
-                          ▼
-                ┌───────────────────┐
-                │ Hybrid Ranker     │
-                └─────────┬─────────┘
-                          ▼
-                Ranked Product Pool
-                          │
-                          ▼
-                ┌───────────────────┐
-                │ PuLP Optimizer    │
-                │                   │
-                │ Budget            │
-                │ Compatibility     │
-                │ Accessories       │
-                │ Preferences       │
-                └─────────┬─────────┘
-                          ▼
-                    Top 3 Bundles
-                          │
-                          ▼
-              ┌─────────────────────┐
-              │ Layout Planner      │
-              │ LLM + KG rules     │
-              └──────────┬──────────┘
-                         ▼
-                  3–5 Candidates
-                         │
-                         ▼
-              ┌─────────────────────┐
-              │ Geometry Engine     │
-              │                     │
-              │ Bounds              │
-              │ Collision           │
-              │ Clearance           │
-              │ Door Swing          │
-              │ Circulation         │
-              │ Infrastructure      │
-              └──────────┬──────────┘
-                         │
-                  invalid │ valid
-                         ▼
-                 Refinement Loop
-                         │
-                         ▼
-                 Best Valid Layout
-                         │
-                         ▼
-              ┌─────────────────────┐
-              │ Deterministic SVG   │
-              └──────────┬──────────┘
-                         ▼
-                 Flask Frontend
-                         │
-                         ▼
-                       USER
-```
----
+-   faucet configuration is incompatible,
+-   an accessory is missing,
+-   an electrical connection is required,
+-   the product is too large,
+-   or the complete bundle exceeds budget.
 
-### Architectural Authority
+## 3. Interior planning
+
+The system extends recommendation into **spatial decision support**.
+
+Instead of stopping at:
+
+> "Here are four products you may like."
+
+it attempts to answer:
+
+> "Here is a compatible product bundle and a physically validated 2D
+> arrangement."
+
+That creates a more complete customer journey from **discovery →
+configuration → planning → visualization**.
+
+## 4. Competitive AI positioning
+
+The differentiating idea is not simply "LLM + product recommendations."
+
+The core proposition is:
+
+``` text
+Multimodal AI
+      +
+Product Knowledge Graph
+      +
+Semantic Retrieval
+      +
+Mathematical Optimization
+      +
+Deterministic Geometry
+      +
+Interactive Visualization
+```
+
+The LLM provides flexible understanding and design intent, while
+deterministic systems protect the output from hard-constraint failures.
+
+This hybrid architecture is especially relevant to manufacturing and
+commerce domains where product relationships, physical dimensions,
+compatibility, cost, and installation requirements matter.
+
+------------------------------------------------------------------------
+
+# Salient Features and Constraints Considered
+
+## Product intelligence
+
+-   Product categories: vanity, faucet, toilet, shower, accessory
+-   Product dimensions
+-   Price
+-   Finish
+-   Style tags
+-   Installation type
+-   Faucet configuration
+-   Required accessories
+-   Compatibility
+-   Infrastructure requirements
+-   Clearance requirements
+
+## User constraints
+
+-   Budget
+-   Design theme
+-   Required fixture categories
+-   Natural-language preferences
+-   Installation preferences where available
+
+## Spatial constraints
+
+-   Room width/depth
+-   Walls
+-   Doors
+-   Door width and offset
+-   Hinge position
+-   Opening direction
+-   Door swing angle/radius when confidently available
+-   Windows
+-   Ventilation
+-   Fixed obstacles
+-   Existing plumbing
+-   Existing electrical
+-   Proposed plumbing
+-   Proposed electrical
+
+## Hard validation rules
+
+-   Fixture must remain inside room bounds
+-   Fixtures cannot overlap
+-   Required clearances must be satisfied
+-   Door swing cannot intersect protected fixture space
+-   Windows can have protected zones
+-   Fixed architecture is immovable
+-   Infrastructure requirements must be satisfied when represented
+-   Circulation constraints are checked deterministically
+-   Invalid layouts cannot win through aesthetic scoring
+
+## Important uncertainty rules
+
+The system does **not** silently fabricate:
+
+-   missing room dimensions,
+-   exact door-swing measurements,
+-   precise product specifications for real products.
+
+Unknown spatial information is represented as uncertain/provisional and
+can prevent the system from claiming an exact layout.
+
+> **POC limitation:** this is a research/demo system and is not
+> professional architectural, plumbing, electrical, structural, or
+> building-code software.
+
+------------------------------------------------------------------------
+
+# System Architecture
+
+``` mermaid
+flowchart TD
+    U["User<br/>Bathroom Image / Plan<br/>Budget + Theme + Requirements"] --> R["Requirements Parser"]
+    U --> V["Multimodal Spatial Extractor"]
+
+    R --> UC["UserConstraints"]
+    V --> SP["SpatialPlan"]
+
+    UC --> HR["Hybrid Product Recommendation"]
+    KG["Neo4j Product Knowledge Graph"] --> HR
+    EMB["Semantic Embedding Index"] --> HR
+    CAT["Synthetic / Curated Product Catalog"] --> HR
+
+    HR --> C["Ranked Product Candidates"]
+
+    C --> OPT["PuLP Bundle Optimizer"]
+    KG --> OPT
+    OPT --> B["Top 3 Product Bundles"]
+
+    B --> LG["Layout Candidate Generator"]
+    SP --> LG
+    KG --> LG
+
+    LG --> LV["Deterministic Geometry Validator"]
+
+    LV -->|Invalid| RF["Layout Refinement"]
+    RF --> LV
+
+    LV -->|Valid| LS["Layout Scoring + Selection"]
+
+    LS --> SVG["Deterministic SVG Renderer"]
+    LS --> EX["Explanation + Trace"]
+
+    SVG --> API["Flask API"]
+    EX --> API
+    B --> API
+    SP --> API
+
+    API --> UI["Interactive Flask / Jinja / Vanilla JS Frontend"]
+
+    UI -->|Replace Product| RP["Replacement Flow"]
+    RP --> HR
+    RP --> OPT
+    RP --> LG
+```
+
+### Architectural authority
 
 The project intentionally separates responsibilities:
 
-| Layer | Primary responsibility | Authority |
-|---|---|---|
-| Multimodal LLM | Interpret image and design intent | Proposal / extraction |
-| Semantic embeddings | Fuzzy aesthetic matching | Ranking signal |
-| Neo4j KG | Explicit product relationships | Hard product rules |
-| PuLP | Discrete bundle selection | Hard optimization constraints |
-| Geometry engine | Physical feasibility | Hard spatial authority |
-| SVG renderer | Visual representation | Deterministic output |
-| Flask | Application/API/UI integration | Orchestration/interface |
+  -------------------------------------------------------------------------
+  Layer                   Primary responsibility  Authority
+  ----------------------- ----------------------- -------------------------
+  Multimodal LLM          Interpret image and     Proposal / extraction
+                          design intent           
 
----
+  Semantic embeddings     Fuzzy aesthetic         Ranking signal
+                          matching                
 
-## Repository Structure
+  Neo4j KG                Explicit product        Hard product rules
+                          relationships           
 
+  PuLP                    Discrete bundle         Hard optimization
+                          selection               constraints
+
+  Geometry engine         Physical feasibility    Hard spatial authority
+
+  SVG renderer            Visual representation   Deterministic output
+
+  Flask                   Application/API/UI      Orchestration/interface
+                          integration             
+  -------------------------------------------------------------------------
+
+The central engineering principle is:
+
+> **AI proposes personalized product and spatial designs; structured
+> product knowledge, mathematical optimization, and deterministic
+> geometry validation enforce consistency and physical feasibility.**
+
+------------------------------------------------------------------------
+
+# Module-by-Module Architecture
+
+## Module 1 --- Configuration and Data Models
+
+``` text
+Environment variables
+       │
+       ▼
+   Settings
+       │
+       ├──────────────┐
+       ▼              ▼
+UserConstraints    SpatialPlan
+       │              │
+       └──────┬───────┘
+              ▼
+          Pipeline
 ```
+
+**Purpose:** establish typed contracts between pipeline stages.
+
+Key models:
+
+-   `Product`
+-   `UserConstraints`
+-   `SourcedValue`
+-   `Door`
+-   `SpatialPlan`
+-   `FixturePlacement`
+-   `Layout`
+-   `DesignResult`
+
+------------------------------------------------------------------------
+
+## Module 2 --- Multimodal LLM + Requirements
+
+``` text
+Bathroom image ──► Vision Provider ──► SpatialPlan
+                                      │
+                                      ├─ confidence
+                                      ├─ source
+                                      └─ provisional state
+
+User text ───────► Requirements Parser ──► UserConstraints
+```
+
+**Purpose:** convert unstructured user input into validated structured
+data.
+
+The provider abstraction keeps the application independent from one
+specific LLM vendor.
+
+------------------------------------------------------------------------
+
+## Module 3 --- Product Catalog
+
+``` text
+synthetic_products.json
+          │
+          ▼
+     Catalog Loader
+          │
+          ▼
+ Product model validation
+          │
+          ▼
+    Catalog in memory
+```
+
+**Purpose:** provide normalized product records to the KG, embedding
+index, recommendation system, optimizer, and renderer.
+
+The synthetic catalog is intended for POC development and evaluation.
+
+------------------------------------------------------------------------
+
+## Module 4 --- Knowledge Graph
+
+``` text
+Product ──STYLED_AS────────► DesignTheme
+   │
+   ├──HAS_FINISH───────────► Finish
+   │
+   ├──COMPATIBLE_WITH──────► Product
+   │
+   ├──INCOMPATIBLE_WITH────► Product
+   │
+   ├──REQUIRES_ACCESSORY───► Accessory
+   │
+   └──REQUIRES_ELECTRICAL──► InfrastructureRequirement
+```
+
+**Purpose:** encode relationships that should not be inferred from
+semantic similarity.
+
+Neo4j/Cypher provides deterministic relationship queries.
+
+------------------------------------------------------------------------
+
+## Module 5 --- Semantic Embeddings + Hybrid Recommendation
+
+``` text
+User theme/preferences
+          │
+          ▼
+   Semantic embedding
+          │
+          ▼
+ Product embedding search
+          │
+          ├───────────────┐
+          ▼               ▼
+ Semantic score       Neo4j evidence
+          │               │
+          └───────┬───────┘
+                  ▼
+           Hybrid Ranker
+                  │
+                  ▼
+        Ranked candidates/category
+```
+
+**Purpose:** combine flexible semantic personalization with explicit
+product rules.
+
+Current scoring components include:
+
+``` text
+55% semantic similarity
+30% KG/theme evidence
+15% preference fit
+```
+
+These are ranking signals; explicit incompatibility remains a hard
+constraint.
+
+------------------------------------------------------------------------
+
+## Module 6 --- Bundle Optimization
+
+``` text
+Ranked candidates
+       │
+       ▼
+   Binary product variables
+       +
+   Binary accessory variables
+       │
+       ▼
+       PuLP / ILP
+       │
+       ├── exactly one/category
+       ├── budget
+       ├── incompatibilities
+       └── required accessories
+       │
+       ▼
+     Top 3 Bundles
+```
+
+**Purpose:** transform individually relevant products into complete
+feasible bundles.
+
+Accessory costs are included in the total budget.
+
+------------------------------------------------------------------------
+
+## Module 7 --- Deterministic Geometry
+
+``` text
+SpatialPlan + Layout
+        │
+        ▼
+ ┌─────────────────────┐
+ │ Room bounds         │
+ │ Collision           │
+ │ Clearance           │
+ │ Door swing          │
+ │ Windows             │
+ │ Obstacles           │
+ │ Circulation         │
+ │ Infrastructure      │
+ └──────────┬──────────┘
+            ▼
+       ValidationResult
+```
+
+**Purpose:** serve as the final authority for physical feasibility.
+
+This layer does not depend on an LLM's statement that a layout "looks
+valid."
+
+------------------------------------------------------------------------
+
+## Module 8 --- Layout Generation + Refinement
+
+``` text
+SpatialPlan + Bundle
+          │
+          ▼
+ Candidate Generator
+          │
+          ▼
+      3–5 candidates
+          │
+          ▼
+ Geometry Validator
+      │          │
+   invalid      valid
+      │          │
+      ▼          ▼
+ Refinement    Scoring
+      │          │
+      └──►Revalidate
+                 │
+                 ▼
+          Best valid layout
+```
+
+**Purpose:** explore multiple spatial arrangements while ensuring that
+only valid candidates can win.
+
+------------------------------------------------------------------------
+
+## Module 9 --- Deterministic SVG Rendering
+
+``` text
+Validated Layout
+      +
+SpatialPlan
+      +
+Product dimensions
+      │
+      ▼
+ SVG Renderer
+      │
+      ├── walls
+      ├── doors
+      ├── swing arc
+      ├── windows
+      ├── fixtures
+      ├── dimensions
+      └── legend
+      │
+      ▼
+ Deterministic SVG
+```
+
+**Purpose:** convert validated geometry into a stable, scaled 2D
+representation.
+
+SVG generation is programmatic rather than LLM-generated.
+
+------------------------------------------------------------------------
+
+## Module 10 --- Flask API + Frontend
+
+``` text
+Browser
+   │
+   ▼
+Flask / Jinja
+   │
+   ├── /api/design
+   ├── /api/recommend
+   ├── /api/layout
+   ├── /api/validate
+   ├── /api/replace
+   └── /api/result
+   │
+   ▼
+DesignPipeline
+   │
+   ▼
+JSON + SVG + trace
+   │
+   ▼
+Interactive UI
+```
+
+The frontend provides:
+
+-   image upload,
+-   requirement entry,
+-   bundle display,
+-   product details,
+-   SVG design canvas,
+-   validation results,
+-   explanations,
+-   product replacement.
+
+------------------------------------------------------------------------
+
+## Module 11 --- Evaluation
+
+``` text
+Synthetic Plans + Gold Outputs
+              │
+              ▼
+          Evaluator
+              │
+     ┌────────┼────────┐
+     ▼        ▼        ▼
+ Spatial   Product   Layout
+ Metrics   Metrics   Metrics
+     │        │        │
+     └────────┼────────┘
+              ▼
+       Aggregate Metrics
+              │
+              ▼
+    Benchmark Results JSON
+```
+
+**Purpose:** quantify system quality rather than relying only on visual
+inspection.
+
+Metrics include extraction errors, recommendation violations, budget
+violations, spatial violations, repair success, and fully valid design
+rate.
+
+------------------------------------------------------------------------
+
+# Repository Structure
+
+``` text
 kohler-ai-bathroom-designer/
 │
 ├── README.md                         # Project README / general documentation
@@ -434,64 +891,56 @@ kohler-ai-bathroom-designer/
     └── run_evaluation.py             # Run evaluation benchmarks
 ```
 
----
+------------------------------------------------------------------------
 
 # Setup
 
----
-
 ## 1. Clone the repository
 
-```bash
+``` bash
 git clone <your-github-repository-url>
 cd kohler-ai-bathroom-designer
 ```
-
----
 
 ## 2. Create a virtual environment
 
 ### Windows
 
-```bash
+``` powershell
 python -m venv .venv
 .venv\Scripts\activate
 ```
 
 ### macOS/Linux
 
-```bash
+``` bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
----
-
 ## 3. Install dependencies
 
-```bash
+``` bash
 pip install -r requirements.txt
 ```
-
----
 
 ## 4. Configure environment variables
 
 Copy:
 
-```text
+``` text
 .env.example
 ```
 
 to:
 
-```text
+``` text
 .env
 ```
 
 Example:
 
-```env
+``` env
 OPENAI_API_KEY=your_openai_api_key
 OPENAI_MODEL=gpt-5.6-luna
 
@@ -505,48 +954,46 @@ NEO4J_USERNAME=neo4j
 NEO4J_PASSWORD=your_neo4j_password
 ```
 
-> **Security:** Keep `.env` private. Never commit API keys or database passwords to GitHub.
+> Keep `.env` private. Never commit API keys or database passwords to
+> GitHub.
 
-The application is designed around an LLM provider abstraction, so another compatible multimodal provider can be integrated without changing the downstream recommendation, optimization, geometry, and rendering layers.
+The application is designed around an LLM provider abstraction, so
+another compatible multimodal provider can be integrated without
+changing the downstream recommendation, optimization, geometry, and
+rendering layers.
 
----
+------------------------------------------------------------------------
 
 # Neo4j Setup
 
----
-
-## 1. Install and start Neo4j
-
-Install and start a local **Neo4j 5.x** database.
+Install and start a local Neo4j 5.x database.
 
 The default configuration expects:
 
-```text
+``` text
 bolt://localhost:7687
 ```
 
 with:
 
-```text
+``` text
 username = neo4j
 password = your configured password
 ```
 
----
+Then seed the synthetic product Knowledge Graph:
 
-## 2. Seed the synthetic product Knowledge Graph
-
-If the checkout contains the seeding script:
-
-```bash
+``` bash
 python scripts/seed_neo4j.py
 ```
 
-If your local checkout does not expose that script, use the KG seeding module/API provided by the project version you are running.
+If your local setup does not expose that script in the current checkout,
+seed through the KG module/API according to the project version you are
+using.
 
 The graph represents product relationships such as:
 
-```text
+``` text
 COMPATIBLE_WITH
 INCOMPATIBLE_WITH
 STYLED_AS
@@ -559,73 +1006,60 @@ REQUIRES_ELECTRICAL
 REQUIRES_INSTALLATION_ZONE
 ```
 
----
+------------------------------------------------------------------------
 
 # Usage
 
----
+## Run environment checks
 
-## 1. Run environment checks
-
-```bash
+``` bash
 python scripts/preflight.py
 ```
 
-This checks whether the local environment has the dependencies and configuration required by the project.
+## Run tests
 
----
-
-## 2. Run tests
-
-```bash
+``` bash
 python -m pytest -q
 ```
 
-Run the test suite before starting the full demo to catch configuration or dependency issues early.
+## Run the offline/demo pipeline
 
----
+The structured spatial-plan path can be used for deterministic
+development and testing without requiring image-based LLM extraction.
 
-## 3. Run the offline/demo pipeline
-
-The structured spatial-plan path can be used for deterministic development and testing without requiring image-based LLM extraction.
-
-```bash
+``` bash
 python scripts/demo_offline.py
 ```
 
-This is useful for validating the recommendation, optimization, layout, geometry-validation, and SVG-rendering pipeline independently of multimodal image extraction.
+## Run the Flask application
 
----
-
-## 4. Run the Flask application
-
-```bash
+``` bash
 python -m app.main
 ```
 
 Then open:
 
-```text
+``` text
 http://127.0.0.1:5000
 ```
 
 The frontend accepts:
 
-- Bathroom image/plan
-- Budget
-- Theme
-- Required fixtures
-- User preferences
+-   bathroom image/plan,
+-   budget,
+-   theme,
+-   required fixtures,
+-   preferences.
 
-The main design request uses:
+The main design request follows:
 
-```http
+``` text
 POST /api/design
 ```
 
 Additional endpoints include:
 
-```http
+``` text
 POST /api/recommend
 POST /api/layout
 POST /api/validate
@@ -633,84 +1067,263 @@ POST /api/replace
 GET  /api/result
 ```
 
----
-
-# Recommended Local Run Order
-
----
-
-```text
-1. Create and activate .venv
-        ↓
-2. Install requirements.txt
-        ↓
-3. Configure .env
-        ↓
-4. Start Neo4j
-        ↓
-5. Seed the Knowledge Graph
-        ↓
-6. Run preflight checks
-        ↓
-7. Run tests
-        ↓
-8. Run offline demo
-        ↓
-9. Start Flask
-        ↓
-10. Open http://127.0.0.1:5000
-        ↓
-11. Upload bathroom image/plan
-        ↓
-12. Enter budget, theme, fixtures and preferences
-        ↓
-13. Generate the design
-```
-
----
+------------------------------------------------------------------------
 
 # End-to-End Design Flow
 
----
+A complete design request follows:
 
-The complete application is intended to follow this pipeline:
-
-```text
-Bathroom Image + User Requirements
-                ↓
+``` text
+Bathroom image + user requirements
+                │
+                ▼
+       Requirements Parser
+                │
+                ▼
        Multimodal Spatial Extraction
-                ↓
-          User Constraints
-                ↓
-       Product Catalog + Neo4j KG
-                +
-       Semantic Product Retrieval
-                ↓
-        Hybrid Recommendation
-                ↓
-          PuLP Optimization
-                ↓
+                │
+                ▼
+            SpatialPlan
+                │
+                ▼
+     Product Candidate Generation
+                │
+          ┌─────┴─────┐
+          ▼           ▼
+     Semantic      Neo4j KG
+     Retrieval      Rules
+          │           │
+          └─────┬─────┘
+                ▼
+          Hybrid Ranking
+                │
+                ▼
+         PuLP Optimization
+                │
+                ▼
             Top 3 Bundles
-                ↓
+                │
+                ▼
        3–5 Layout Candidates
-                ↓
-      Deterministic Geometry Validation
-                ↓
-        Refinement of Invalid Layouts
-                ↓
-          Best Valid Layout
-                ↓
-        Deterministic SVG Renderer
-                ↓
-          Flask Interactive UI
+                │
+                ▼
+     Deterministic Validation
+                │
+        ┌───────┴────────┐
+        ▼                ▼
+     Invalid            Valid
+        │                │
+        ▼                ▼
+     Refinement        Scoring
+        │                │
+        └── Revalidate ──┘
+                         │
+                         ▼
+                  Best Valid Layout
+                         │
+                         ▼
+                Deterministic SVG
+                         │
+                         ▼
+                  Flask Frontend
 ```
 
----
+------------------------------------------------------------------------
+
+# Product Replacement Flow
+
+The system also supports follow-up changes such as:
+
+> Replace the vanity.
+
+The replacement flow is:
+
+``` text
+Selected product
+      │
+      ▼
+Identify category
+      │
+      ▼
+Retrieve alternative candidates
+      │
+      ▼
+Apply KG compatibility
+      │
+      ▼
+Recalculate accessories
+      │
+      ▼
+Recalculate bundle cost
+      │
+      ▼
+Re-check budget
+      │
+      ▼
+Re-check infrastructure
+      │
+      ▼
+Regenerate layout
+      │
+      ▼
+Deterministic validation
+      │
+      ▼
+Updated SVG
+```
+
+The goal is to avoid blindly rebuilding unrelated input while still
+rerunning the stages whose outputs can change because of the
+replacement.
+
+------------------------------------------------------------------------
+
+# Evaluation
+
+The project includes synthetic evaluation scenarios covering:
+
+-   small bathrooms,
+-   medium bathrooms,
+-   large bathrooms,
+-   different door positions,
+-   different door widths,
+-   different door swing directions,
+-   windows,
+-   ventilation,
+-   fixed obstacles,
+-   infrastructure requirements,
+-   infeasible rooms,
+-   missing room dimensions,
+-   unknown door swing.
+
+Run:
+
+``` bash
+python scripts/run_evaluation.py
+```
+
+The evaluation framework measures:
+
+### Spatial extraction
+
+-   room dimension error,
+-   door position error,
+-   door width error,
+-   door categorical accuracy,
+-   window detection accuracy.
+
+### Recommendation
+
+-   required-category coverage,
+-   missing categories,
+-   duplicate categories,
+-   compatibility violations.
+
+### Optimization
+
+-   budget violation,
+-   budget shortfall,
+-   accessory omission,
+-   infeasible bundle detection.
+
+### Layout
+
+-   fixture overlap,
+-   room-boundary violations,
+-   door-swing violations,
+-   clearance violations,
+-   circulation violations,
+-   infrastructure violations,
+-   repair attempts,
+-   repair success.
+
+### Overall
+
+-   fully valid design rate,
+-   average layout validity,
+-   recommendation violation rate,
+-   optimization violation rate,
+-   repair success rate.
+
+------------------------------------------------------------------------
+
+# Research / Engineering Design Principles
+
+### Deterministic hard constraints
+
+Hard constraints should not be delegated to an LLM when deterministic
+validation is possible.
+
+### Structured intermediate representations
+
+Pipeline stages communicate through typed models rather than loosely
+formatted strings.
+
+### Explicit product relationships
+
+Known incompatibilities and requirements are represented explicitly in
+the Knowledge Graph.
+
+### Semantic personalization
+
+Embeddings handle fuzzy design language and aesthetic intent.
+
+### Mathematical optimization
+
+PuLP selects combinations under discrete constraints rather than relying
+on an LLM to perform combinatorial optimization.
+
+### Deterministic rendering
+
+The final SVG is generated programmatically from validated geometry.
+
+### Explainability
+
+Pipeline decisions and rejection reasons are preserved in the result
+trace so the system can explain why a product or layout was selected.
+
+------------------------------------------------------------------------
+
+# Limitations
+
+This project is a **research/demo POC**, not professional architectural
+software.
+
+It should not be used as authoritative guidance for:
+
+-   building-code compliance,
+-   structural engineering,
+-   plumbing design,
+-   electrical design,
+-   accessibility certification,
+-   construction documentation,
+-   professional architectural approval.
+
+Real-product mode should only contain specifications that have actually
+been sourced and verified from appropriate official product/technical
+documentation.
+
+The synthetic catalog is intentionally used for development and
+evaluation so that the system does not make unsupported claims about
+real Kohler product specifications.
+
+------------------------------------------------------------------------
 
 # Author
 
-Satyam Kumar
+**Satyam Kumar**
 
-B.Tech — Computer Science & Engineering
+B.Tech --- Computer Science & Engineering
 
-Interests: Artificial Intelligence, Machine Learning, NLP, Generative AI, Knowledge Graphs, Recommendation Systems.
+Interests: Artificial Intelligence, Machine Learning, Computer Vision,
+NLP, Generative AI, Knowledge Graphs, Recommendation Systems, and
+AI-assisted spatial planning.
+
+------------------------------------------------------------------------
+
+## Project Thesis
+
+> **AI proposes personalized product and spatial designs, while
+> structured product knowledge, mathematical optimization, and
+> deterministic geometric validation ensure that recommendations remain
+> consistent with user requirements and physical constraints.**
