@@ -153,7 +153,7 @@ The same validated layout produces the same SVG representation.
 
 ## 1. AI in manufacturing and product ecosystems
 
-The project demonstrates how generative AI can move beyond text generation into a **constraint-aware product configuration workflow**.
+The project demonstrates how generative AI can move beyond text and image generation into a **constraint-aware product configuration workflow**.
 
 For a manufacturer such as Kohler, the same architecture can support:
 
@@ -185,3 +185,88 @@ accessories
 budget
         =
 feasible product bundle
+
+## System Architecture
+```text
+                         USER
+              Image + Requirements + Budget
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │ Multimodal LLM      │
+                │                     │
+                │ • Requirement parse │
+                │ • Spatial extraction│
+                └──────────┬──────────┘
+                           │
+                 ┌─────────┴─────────┐
+                 ▼                   ▼
+        User Constraints       Spatial Plan
+                 │                   │
+                 └─────────┬─────────┘
+                           ▼
+              ┌───────────────────────┐
+              │ Product Intelligence  │
+              │                       │
+              │ Neo4j KG              │
+              │ +                     │
+              │ Semantic Embeddings   │
+              └───────────┬───────────┘
+                          ▼
+                  Candidate Products
+                          │
+                          ▼
+                ┌───────────────────┐
+                │ Hybrid Ranker     │
+                └─────────┬─────────┘
+                          ▼
+                Ranked Product Pool
+                          │
+                          ▼
+                ┌───────────────────┐
+                │ PuLP Optimizer    │
+                │                   │
+                │ Budget            │
+                │ Compatibility     │
+                │ Accessories       │
+                │ Preferences       │
+                └─────────┬─────────┘
+                          ▼
+                    Top 3 Bundles
+                          │
+                          ▼
+              ┌─────────────────────┐
+              │ Layout Planner      │
+              │ LLM + KG rules     │
+              └──────────┬──────────┘
+                         ▼
+                  3–5 Candidates
+                         │
+                         ▼
+              ┌─────────────────────┐
+              │ Geometry Engine     │
+              │                     │
+              │ Bounds              │
+              │ Collision           │
+              │ Clearance           │
+              │ Door Swing          │
+              │ Circulation         │
+              │ Infrastructure      │
+              └──────────┬──────────┘
+                         │
+                  invalid │ valid
+                         ▼
+                 Refinement Loop
+                         │
+                         ▼
+                 Best Valid Layout
+                         │
+                         ▼
+              ┌─────────────────────┐
+              │ Deterministic SVG   │
+              └──────────┬──────────┘
+                         ▼
+                 Flask Frontend
+                         │
+                         ▼
+                       USER
