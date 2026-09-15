@@ -707,32 +707,10 @@ Bathroom Image + User Requirements
 
 ---
 
-# Product Replacement Flow
+# Author
 
----
+Satyam Kumar
 
-The application also supports product replacement after an initial design:
+B.Tech — Computer Science & Engineering
 
-```text
-User selects product to replace
-                ↓
-Identify affected category
-                ↓
-Retrieve alternative products
-                ↓
-Check KG compatibility
-                ↓
-Recalculate accessories
-                ↓
-Re-optimize budget/bundle
-                ↓
-Recheck infrastructure constraints
-                ↓
-Regenerate affected layout candidates
-                ↓
-Run geometry validation
-                ↓
-Update deterministic SVG
-```
-
-This keeps the replacement workflow consistent with the same product, optimization, geometry, and rendering rules used by the initial design pipeline.
+Interests: Artificial Intelligence, Machine Learning, NLP, Generative AI, Knowledge Graphs, Recommendation Systems.
