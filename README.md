@@ -2,10 +2,6 @@
 
 > An AI-assisted bathroom planning and product recommendation POC that combines multimodal spatial understanding, structured product knowledge, semantic retrieval, mathematical bundle optimization, deterministic geometry validation, layout refinement, and SVG-based 2D visualization.
 
----
-
-## Tech Stack
-
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Flask-3.x-000000?style=flat-square&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
 [![Pydantic](https://img.shields.io/badge/Pydantic-2.x-E92063?style=flat-square)](https://docs.pydantic.dev/)
