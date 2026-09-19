@@ -30,7 +30,7 @@ architecture prepared for a separate curated real-product mode.
 ### 📁 Submission Files & Project Demo Video
 
 * **Drive Folder:** [View Project Files & Demo Video](https://drive.google.com/drive/folders/1oph_SpDNb00vcEXeRS-ZYYc-RcGB6yxC?usp=sharing)
-* * **YouTube Demo link:** [View Demo Video on YouTube](https://youtu.be/IQe2SfiU8cE)
+* **YouTube Demo link:** [View Demo Video on YouTube](https://youtu.be/IQe2SfiU8cE)
 ------------------------------------------------------------------------
 
 ## Problem Statement
