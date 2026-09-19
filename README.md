@@ -27,6 +27,9 @@ Note: The system uses a provider-agnostic LLM abstraction. The recorded demonstr
 **Data modes:** synthetic catalog for development/evaluation, with
 architecture prepared for a separate curated real-product mode.
 
+### 📁 Submission Files & Project Demo Video
+
+* **Drive Folder:** [View Project Files & Demo Video](https://drive.google.com/drive/folders/1oph_SpDNb00vcEXeRS-ZYYc-RcGB6yxC?usp=sharing)
 ------------------------------------------------------------------------
 
 ## Problem Statement
