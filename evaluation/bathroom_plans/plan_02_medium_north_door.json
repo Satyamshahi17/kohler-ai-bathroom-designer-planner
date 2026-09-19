@@ -1,19 +1,49 @@
 {
   "id": "plan_02_medium_north_door",
   "description": "Medium bathroom with north sliding-style entry representation and west window.",
-  "room": {
-    "width": 2400,
-    "depth": 3000,
-    "unit": "mm"
+  "room_width": {
+    "value": 2400,
+    "unit": "mm",
+    "source": "explicit_annotation",
+    "confidence": 1.0
+  },
+  "room_depth": {
+    "value": 3000,
+    "unit": "mm",
+    "source": "explicit_annotation",
+    "confidence": 1.0
   },
   "door": {
     "wall": "north",
-    "offset": 900,
-    "width": 800,
+    "offset": {
+      "value": 900,
+      "unit": "mm",
+      "source": "explicit_annotation",
+      "confidence": 1.0
+    },
+    "width": {
+      "value": 800,
+      "unit": "mm",
+      "source": "explicit_annotation",
+      "confidence": 1.0
+    },
     "hinge_position": "right",
     "opening_direction": "inward",
-    "swing_angle": 90,
-    "swing_radius": 800
+    "swing": {
+      "direction": "inward",
+      "angle": {
+        "value": 90,
+        "unit": "degrees",
+        "source": "explicit_annotation",
+        "confidence": 1.0
+      },
+      "swing_radius": {
+        "value": 800,
+        "unit": "mm",
+        "source": "explicit_annotation",
+        "confidence": 1.0
+      }
+    }
   },
   "windows": [
     {
@@ -54,5 +84,8 @@
       "wall": "south",
       "offset": 1200
     }
-  ]
+  ],
+  "proposed_plumbing": [],
+  "proposed_electrical": []
 }
+

@@ -2,10 +2,12 @@
 
 from __future__ import annotations
 
-from pathlib import Path
+import os
 from typing import Any
 
-from app.products.catalog import ProductCatalog
+from dotenv import load_dotenv
+
+from app.products.catalog import load_products
 from .connection import Neo4jConnection
 from .schema import CONSTRAINTS
 
@@ -22,47 +24,100 @@ THEME_NAMES = {
 
 
 def _themes(product: dict[str, Any]) -> list[str]:
-    return list(dict.fromkeys(product.get("style_tags", []) + [product.get("finish", "")]))
+    return list(
+        dict.fromkeys(
+            product.get("style_tags", [])
+            + ([product["finish"]] if product.get("finish") else [])
+        )
+    )
 
 
-def seed_database(connection: Neo4jConnection, catalog: ProductCatalog) -> None:
+def seed_database(
+    connection: Neo4jConnection,
+    catalog: list[Any],
+) -> None:
+
+    # Create constraints/indexes
     for constraint in CONSTRAINTS:
         connection.run(constraint)
 
+    # Clear existing graph
     connection.run("MATCH (n) DETACH DELETE n")
 
-    products = catalog.products
-    for product in products:
+    # catalog is list[Product]
+    for product_model in catalog:
+
+        # Convert Pydantic Product → dictionary
+        product = product_model.model_dump()
+
+        # Neo4j product properties
         connection.run(
             """
             MERGE (p:Product {id: $id})
-            SET p.model_number=$model_number, p.name=$name, p.category=$category,
-                p.price=$price, p.width=$width, p.depth=$depth, p.height=$height,
-                p.description=$description, p.installation_type=$installation_type,
-                p.faucet_configuration=$faucet_configuration,
-                p.clearance_requirements=$clearance_requirements,
-                p.infrastructure_requirements=$infrastructure_requirements
+            SET p.model_number = $model_number,
+                p.name = $name,
+                p.category = $category,
+                p.price = $price,
+                p.width = $width,
+                p.depth = $depth,
+                p.height = $height,
+                p.description = $description,
+                p.installation_type = $installation_type,
+                p.faucet_configuration = $faucet_configuration,
+                p.clearance_requirements = $clearance_requirements,
+                p.infrastructure_requirements = $infrastructure_requirements
+
             MERGE (c:Category {name: $category})
             MERGE (p)-[:IN_CATEGORY]->(c)
             """,
-            **product,
+            id=product["id"],
+            model_number=product["model_number"],
+            name=product["name"],
+            category=product["category"],
+            price=product["price"],
+            width=product["width"],
+            depth=product["depth"],
+            height=product["height"],
+            description=product["description"],
+            installation_type=product.get("installation_type"),
             faucet_configuration=product.get("faucet_configuration"),
+            clearance_requirements=str(
+                product.get("clearance_requirements", {})
+            ),
+            infrastructure_requirements=product.get(
+                "infrastructure_requirements", []
+            ),
         )
+
+        # -------------------------
+        # Design themes
+        # -------------------------
 
         for tag in _themes(product):
             if not tag:
                 continue
-            theme = THEME_NAMES.get(tag.lower().replace(" ", "_"), tag.title())
+
+            theme = THEME_NAMES.get(
+                tag.lower().replace(" ", "_"),
+                tag.title(),
+            )
+
             connection.run(
                 """
                 MATCH (p:Product {id: $id})
                 MERGE (t:DesignTheme {name: $theme})
                 MERGE (p)-[:STYLED_AS]->(t)
                 """,
-                id=product["id"], theme=theme,
+                id=product["id"],
+                theme=theme,
             )
 
+        # -------------------------
+        # Finish
+        # -------------------------
+
         finish = product.get("finish")
+
         if finish:
             connection.run(
                 """
@@ -70,29 +125,35 @@ def seed_database(connection: Neo4jConnection, catalog: ProductCatalog) -> None:
                 MERGE (f:Finish {name: $finish})
                 MERGE (p)-[:HAS_FINISH]->(f)
                 """,
-                id=product["id"], finish=finish,
+                id=product["id"],
+                finish=finish,
             )
 
-        for accessory_id in product.get("required_accessories", []):
+        # -------------------------
+        # Required accessories
+        # -------------------------
+
+        for accessory_id in product.get(
+            "required_accessories", []
+        ):
+
             connection.run(
                 """
                 MATCH (p:Product {id: $product_id})
                 MERGE (a:Accessory {id: $accessory_id})
                 MERGE (p)-[:REQUIRES_ACCESSORY]->(a)
                 """,
-                product_id=product["id"], accessory_id=accessory_id,
+                product_id=product["id"],
+                accessory_id=accessory_id,
             )
 
-        infra = product.get("infrastructure_requirements", []) or []
-        # The synthetic catalog currently stores infrastructure requirements as
-        # a flat list. Keep support for richer dict-shaped data as well.
-        if isinstance(infra, dict):
-            items = []
-            for key, value in infra.items():
-                values = value if isinstance(value, list) else [value]
-                items.extend((key, item) for item in values)
-        else:
-            items = [(item, item) for item in infra]
+        # -------------------------
+        # Infrastructure
+        # -------------------------
+
+        infrastructure = product.get(
+            "infrastructure_requirements", []
+        ) or []
 
         rel_map = {
             "plumbing": "REQUIRES_PLUMBING",
@@ -101,41 +162,83 @@ def seed_database(connection: Neo4jConnection, catalog: ProductCatalog) -> None:
             "electrical": "REQUIRES_ELECTRICAL",
             "installation_zone": "REQUIRES_INSTALLATION_ZONE",
         }
-        for key, requirement in items:
-            rel = rel_map.get(key, "REQUIRES")
-            name = requirement if isinstance(requirement, str) else requirement.get("name")
-            max_distance = requirement.get("max_distance") if isinstance(requirement, dict) else None
+
+        for requirement in infrastructure:
+
+            if isinstance(requirement, dict):
+                key = requirement.get("type", "other")
+                name = requirement.get("name")
+                max_distance = requirement.get("max_distance")
+            else:
+                key = requirement
+                name = requirement
+                max_distance = None
+
             if not name:
                 continue
+
+            relationship = rel_map.get(
+                key,
+                "REQUIRES",
+            )
+
             connection.run(
                 f"""
                 MATCH (p:Product {{id: $product_id}})
                 MERGE (i:InfrastructureRequirement {{name: $name}})
-                MERGE (p)-[r:{rel}]->(i)
+                MERGE (p)-[r:{relationship}]->(i)
                 SET r.max_distance = $max_distance
                 """,
-                product_id=product["id"], name=name, max_distance=max_distance,
+                product_id=product["id"],
+                name=name,
+                max_distance=max_distance,
             )
 
-        compatibility = product.get("compatibility", [])
-        compatible_ids = compatibility if isinstance(compatibility, list) else compatibility.get("compatible_with", [])
-        incompatible_ids = [] if isinstance(compatibility, list) else compatibility.get("incompatible_with", [])
-        for compatible_id in compatible_ids:
+        # -------------------------
+        # Compatibility
+        # -------------------------
+
+        compatibility = product.get(
+            "compatibility", []
+        ) or []
+
+        for compatible_id in compatibility:
+
             connection.run(
                 """
                 MATCH (p:Product {id: $product_id})
-                MERGE (q:Product {id: $other_id})
+                MATCH (q:Product {id: $other_id})
                 MERGE (p)-[:COMPATIBLE_WITH]->(q)
                 """,
-                product_id=product["id"], other_id=compatible_id,
+                product_id=product["id"],
+                other_id=compatible_id,
             )
 
-        for incompatible_id in incompatible_ids:
-            connection.run(
-                """
-                MATCH (p:Product {id: $product_id})
-                MERGE (q:Product {id: $other_id})
-                MERGE (p)-[:INCOMPATIBLE_WITH]->(q)
-                """,
-                product_id=product["id"], other_id=incompatible_id,
-            )
+
+if __name__ == "__main__":
+
+    load_dotenv()
+
+    connection = Neo4jConnection(
+        uri=os.environ["NEO4J_URI"],
+        username=os.environ["NEO4J_USERNAME"],
+        password=os.environ["NEO4J_PASSWORD"],
+        database=os.environ["NEO4J_DATABASE"],
+    )
+
+    catalog = load_products()
+
+    try:
+        connection.connect()
+
+        seed_database(
+            connection,
+            catalog,
+        )
+
+        print(
+            f"✅ Successfully seeded {len(catalog)} products into Neo4j."
+        )
+
+    finally:
+        connection.close()

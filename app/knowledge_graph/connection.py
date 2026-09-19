@@ -12,7 +12,7 @@ except ImportError:  # pragma: no cover - exercised when optional dependency is 
 
 
 class Neo4jConnection:
-    def __init__(self, uri: str, username: str, password: str, database: str = "neo4j") -> None:
+    def __init__(self, uri: str, username: str, password: str, database: str = "067d9bee") -> None:
         self.uri = uri
         self.username = username
         self.password = password

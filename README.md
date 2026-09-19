@@ -22,6 +22,8 @@ Transformers](https://img.shields.io/badge/Sentence--Transformers-Embeddings-FF6
 sentence-transformers, OpenAI multimodal API, Jinja2, HTML/CSS, Vanilla
 JavaScript, deterministic SVG rendering, pytest.
 
+Note: The system uses a provider-agnostic LLM abstraction. The recorded demonstration uses Groq-hosted Qwen 3.8 27B, while an OpenAI multimodal provider is retained as an alternative implementation.
+
 **Data modes:** synthetic catalog for development/evaluation, with
 architecture prepared for a separate curated real-product mode.
 
@@ -176,103 +178,6 @@ The same validated layout produces the same SVG representation.
 
 ------------------------------------------------------------------------
 
-# Business Impact
-
-## 1. AI in manufacturing and product ecosystems
-
-The project demonstrates how generative AI can move beyond text
-generation into a **constraint-aware product configuration workflow**.
-
-For a manufacturer such as Kohler, the same architecture can support:
-
--   guided product discovery,
--   product configuration,
--   compatibility-aware cross-selling,
--   accessory attachment,
--   design assistance,
--   spatial planning,
--   customer-specific recommendations.
-
-The Knowledge Graph creates a machine-readable layer over product
-relationships, while the optimization layer converts recommendations
-into complete, constraint-aware bundles.
-
-This creates a bridge between **AI personalization and structured
-manufacturing/product knowledge**.
-
-## 2. Recommendation engine
-
-Traditional recommendation systems often optimize relevance or
-similarity.
-
-This project adds hard product logic:
-
-``` text
-semantic relevance
-        +
-explicit compatibility
-        +
-accessories
-        +
-budget
-        =
-feasible product bundle
-```
-
-This is particularly valuable for bathroom products because a visually
-or semantically attractive recommendation can still be unusable when:
-
--   faucet configuration is incompatible,
--   an accessory is missing,
--   an electrical connection is required,
--   the product is too large,
--   or the complete bundle exceeds budget.
-
-## 3. Interior planning
-
-The system extends recommendation into **spatial decision support**.
-
-Instead of stopping at:
-
-> "Here are four products you may like."
-
-it attempts to answer:
-
-> "Here is a compatible product bundle and a physically validated 2D
-> arrangement."
-
-That creates a more complete customer journey from **discovery →
-configuration → planning → visualization**.
-
-## 4. Competitive AI positioning
-
-The differentiating idea is not simply "LLM + product recommendations."
-
-The core proposition is:
-
-``` text
-Multimodal AI
-      +
-Product Knowledge Graph
-      +
-Semantic Retrieval
-      +
-Mathematical Optimization
-      +
-Deterministic Geometry
-      +
-Interactive Visualization
-```
-
-The LLM provides flexible understanding and design intent, while
-deterministic systems protect the output from hard-constraint failures.
-
-This hybrid architecture is especially relevant to manufacturing and
-commerce domains where product relationships, physical dimensions,
-compatibility, cost, and installation requirements matter.
-
-------------------------------------------------------------------------
-
 # Salient Features and Constraints Considered
 
 ## Product intelligence
@@ -395,27 +300,16 @@ flowchart TD
 
 The project intentionally separates responsibilities:
 
-  -------------------------------------------------------------------------
-  Layer                   Primary responsibility  Authority
-  ----------------------- ----------------------- -------------------------
-  Multimodal LLM          Interpret image and     Proposal / extraction
-                          design intent           
 
-  Semantic embeddings     Fuzzy aesthetic         Ranking signal
-                          matching                
-
-  Neo4j KG                Explicit product        Hard product rules
-                          relationships           
-
-  PuLP                    Discrete bundle         Hard optimization
-                          selection               constraints
-
-  Geometry engine         Physical feasibility    Hard spatial authority
-
-  SVG renderer            Visual representation   Deterministic output
-
-  Flask                   Application/API/UI      Orchestration/interface
-                          integration             
+| Layer | Primary responsibility | Authority |
+| --- | --- | --- |
+| Multimodal LLM | Interpret image and design intent | Proposal / extraction |
+| Semantic embeddings | Fuzzy aesthetic matching | Ranking signal |
+| Neo4j KG | Explicit product relationships | Hard product rules |
+| PuLP | Discrete bundle selection | Hard optimization constraints |
+| Geometry engine | Physical feasibility | Hard spatial authority |
+| SVG renderer | Visual representation | Deterministic output |
+| Flask | Application/API/UI integration | Orchestration/interface |
   -------------------------------------------------------------------------
 
 The central engineering principle is:
