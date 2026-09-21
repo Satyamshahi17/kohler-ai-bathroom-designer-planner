@@ -1,4 +1,4 @@
-# Kohler AI Bathroom Planner and Designer
+# AI Bathroom Planner and Designer
 
 > An AI-assisted bathroom planning and product recommendation POC that
 > combines multimodal spatial understanding, structured product
